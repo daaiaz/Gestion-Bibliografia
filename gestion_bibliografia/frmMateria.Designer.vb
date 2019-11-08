@@ -25,26 +25,26 @@ Partial Class frmMateria
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMateria))
         Me.tbcMateria = New System.Windows.Forms.TabControl()
         Me.tbpABM = New System.Windows.Forms.TabPage()
-        Me.tbpConsulta = New System.Windows.Forms.TabPage()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.lblDescripcionMateria = New System.Windows.Forms.Label()
-        Me.txtIdMateria = New System.Windows.Forms.TextBox()
-        Me.lblId = New System.Windows.Forms.Label()
+        Me.lblFacultad = New System.Windows.Forms.Label()
+        Me.cboFacultad = New System.Windows.Forms.ComboBox()
+        Me.lblTitulo = New System.Windows.Forms.Label()
         Me.gbxBotonera = New System.Windows.Forms.GroupBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.lblFacultad = New System.Windows.Forms.Label()
-        Me.cboFacultad = New System.Windows.Forms.ComboBox()
-        Me.dgvConsulta = New System.Windows.Forms.DataGridView()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.lblDescripcionMateria = New System.Windows.Forms.Label()
+        Me.txtIdMateria = New System.Windows.Forms.TextBox()
+        Me.lblId = New System.Windows.Forms.Label()
+        Me.tbpConsulta = New System.Windows.Forms.TabPage()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtBuscarDescripcion = New System.Windows.Forms.TextBox()
         Me.lblBuscarDescripcion = New System.Windows.Forms.Label()
+        Me.dgvConsulta = New System.Windows.Forms.DataGridView()
         Me.tbcMateria.SuspendLayout()
         Me.tbpABM.SuspendLayout()
-        Me.tbpConsulta.SuspendLayout()
         Me.gbxBotonera.SuspendLayout()
+        Me.tbpConsulta.SuspendLayout()
         CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,56 +77,35 @@ Partial Class frmMateria
         Me.tbpABM.Text = "ABM"
         Me.tbpABM.UseVisualStyleBackColor = True
         '
-        'tbpConsulta
+        'lblFacultad
         '
-        Me.tbpConsulta.Controls.Add(Me.btnBuscar)
-        Me.tbpConsulta.Controls.Add(Me.txtBuscarDescripcion)
-        Me.tbpConsulta.Controls.Add(Me.lblBuscarDescripcion)
-        Me.tbpConsulta.Controls.Add(Me.dgvConsulta)
-        Me.tbpConsulta.Location = New System.Drawing.Point(4, 25)
-        Me.tbpConsulta.Name = "tbpConsulta"
-        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpConsulta.Size = New System.Drawing.Size(669, 300)
-        Me.tbpConsulta.TabIndex = 1
-        Me.tbpConsulta.Text = "Consulta"
-        Me.tbpConsulta.UseVisualStyleBackColor = True
+        Me.lblFacultad.AutoSize = True
+        Me.lblFacultad.Location = New System.Drawing.Point(23, 138)
+        Me.lblFacultad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblFacultad.Name = "lblFacultad"
+        Me.lblFacultad.Size = New System.Drawing.Size(62, 17)
+        Me.lblFacultad.TabIndex = 14
+        Me.lblFacultad.Text = "Facultad"
         '
-        'txtDescripcion
+        'cboFacultad
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(136, 96)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(297, 22)
-        Me.txtDescripcion.TabIndex = 5
+        Me.cboFacultad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboFacultad.FormattingEnabled = True
+        Me.cboFacultad.Location = New System.Drawing.Point(134, 135)
+        Me.cboFacultad.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboFacultad.Name = "cboFacultad"
+        Me.cboFacultad.Size = New System.Drawing.Size(299, 24)
+        Me.cboFacultad.TabIndex = 13
         '
-        'lblDescripcionMateria
+        'lblTitulo
         '
-        Me.lblDescripcionMateria.AutoSize = True
-        Me.lblDescripcionMateria.Location = New System.Drawing.Point(23, 96)
-        Me.lblDescripcionMateria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblDescripcionMateria.Name = "lblDescripcionMateria"
-        Me.lblDescripcionMateria.Size = New System.Drawing.Size(82, 17)
-        Me.lblDescripcionMateria.TabIndex = 6
-        Me.lblDescripcionMateria.Text = "Descripción"
-        '
-        'txtIdMateria
-        '
-        Me.txtIdMateria.Location = New System.Drawing.Point(136, 58)
-        Me.txtIdMateria.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtIdMateria.Name = "txtIdMateria"
-        Me.txtIdMateria.ReadOnly = True
-        Me.txtIdMateria.Size = New System.Drawing.Size(168, 22)
-        Me.txtIdMateria.TabIndex = 3
-        '
-        'lblId
-        '
-        Me.lblId.AutoSize = True
-        Me.lblId.Location = New System.Drawing.Point(23, 58)
-        Me.lblId.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(70, 17)
-        Me.lblId.TabIndex = 4
-        Me.lblId.Text = "Id Materia"
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Location = New System.Drawing.Point(294, 15)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(108, 25)
+        Me.lblTitulo.TabIndex = 12
+        Me.lblTitulo.Text = "MATERIA"
         '
         'gbxBotonera
         '
@@ -171,45 +150,56 @@ Partial Class frmMateria
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'lblTitulo
+        'txtDescripcion
         '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(294, 15)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(108, 25)
-        Me.lblTitulo.TabIndex = 12
-        Me.lblTitulo.Text = "MATERIA"
+        Me.txtDescripcion.Location = New System.Drawing.Point(136, 96)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(297, 22)
+        Me.txtDescripcion.TabIndex = 5
         '
-        'lblFacultad
+        'lblDescripcionMateria
         '
-        Me.lblFacultad.AutoSize = True
-        Me.lblFacultad.Location = New System.Drawing.Point(23, 138)
-        Me.lblFacultad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblFacultad.Name = "lblFacultad"
-        Me.lblFacultad.Size = New System.Drawing.Size(62, 17)
-        Me.lblFacultad.TabIndex = 14
-        Me.lblFacultad.Text = "Facultad"
+        Me.lblDescripcionMateria.AutoSize = True
+        Me.lblDescripcionMateria.Location = New System.Drawing.Point(23, 96)
+        Me.lblDescripcionMateria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionMateria.Name = "lblDescripcionMateria"
+        Me.lblDescripcionMateria.Size = New System.Drawing.Size(82, 17)
+        Me.lblDescripcionMateria.TabIndex = 6
+        Me.lblDescripcionMateria.Text = "Descripción"
         '
-        'cboFacultad
+        'txtIdMateria
         '
-        Me.cboFacultad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboFacultad.FormattingEnabled = True
-        Me.cboFacultad.Location = New System.Drawing.Point(134, 135)
-        Me.cboFacultad.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboFacultad.Name = "cboFacultad"
-        Me.cboFacultad.Size = New System.Drawing.Size(299, 24)
-        Me.cboFacultad.TabIndex = 13
+        Me.txtIdMateria.Location = New System.Drawing.Point(136, 58)
+        Me.txtIdMateria.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIdMateria.Name = "txtIdMateria"
+        Me.txtIdMateria.ReadOnly = True
+        Me.txtIdMateria.Size = New System.Drawing.Size(168, 22)
+        Me.txtIdMateria.TabIndex = 3
         '
-        'dgvConsulta
+        'lblId
         '
-        Me.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvConsulta.Location = New System.Drawing.Point(3, 81)
-        Me.dgvConsulta.Name = "dgvConsulta"
-        Me.dgvConsulta.RowTemplate.Height = 24
-        Me.dgvConsulta.Size = New System.Drawing.Size(663, 216)
-        Me.dgvConsulta.TabIndex = 0
+        Me.lblId.AutoSize = True
+        Me.lblId.Location = New System.Drawing.Point(23, 58)
+        Me.lblId.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(70, 17)
+        Me.lblId.TabIndex = 4
+        Me.lblId.Text = "Id Materia"
+        '
+        'tbpConsulta
+        '
+        Me.tbpConsulta.Controls.Add(Me.btnBuscar)
+        Me.tbpConsulta.Controls.Add(Me.txtBuscarDescripcion)
+        Me.tbpConsulta.Controls.Add(Me.lblBuscarDescripcion)
+        Me.tbpConsulta.Controls.Add(Me.dgvConsulta)
+        Me.tbpConsulta.Location = New System.Drawing.Point(4, 25)
+        Me.tbpConsulta.Name = "tbpConsulta"
+        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbpConsulta.Size = New System.Drawing.Size(669, 300)
+        Me.tbpConsulta.TabIndex = 1
+        Me.tbpConsulta.Text = "Consulta"
+        Me.tbpConsulta.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
@@ -241,6 +231,16 @@ Partial Class frmMateria
         Me.lblBuscarDescripcion.TabIndex = 4
         Me.lblBuscarDescripcion.Text = "Buscar por Descripción"
         '
+        'dgvConsulta
+        '
+        Me.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvConsulta.Location = New System.Drawing.Point(3, 81)
+        Me.dgvConsulta.Name = "dgvConsulta"
+        Me.dgvConsulta.RowTemplate.Height = 24
+        Me.dgvConsulta.Size = New System.Drawing.Size(663, 216)
+        Me.dgvConsulta.TabIndex = 0
+        '
         'frmMateria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -252,9 +252,9 @@ Partial Class frmMateria
         Me.tbcMateria.ResumeLayout(False)
         Me.tbpABM.ResumeLayout(False)
         Me.tbpABM.PerformLayout()
+        Me.gbxBotonera.ResumeLayout(False)
         Me.tbpConsulta.ResumeLayout(False)
         Me.tbpConsulta.PerformLayout()
-        Me.gbxBotonera.ResumeLayout(False)
         CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

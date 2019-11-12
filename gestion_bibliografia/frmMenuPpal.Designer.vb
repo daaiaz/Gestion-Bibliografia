@@ -28,10 +28,12 @@ Partial Class frmMenuPpal
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MateriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniMateria = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.stsVersion = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ntiNotifcacion = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.LibroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BibliografíaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMenuPpal.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -55,7 +57,7 @@ Partial Class frmMenuPpal
         '
         'MateriaToolStripMenuItem
         '
-        Me.MateriaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniMateria})
+        Me.MateriaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniMateria, Me.LibroToolStripMenuItem, Me.BibliografíaToolStripMenuItem})
         Me.MateriaToolStripMenuItem.Name = "MateriaToolStripMenuItem"
         Me.MateriaToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.MateriaToolStripMenuItem.Text = "Programas"
@@ -65,6 +67,12 @@ Partial Class frmMenuPpal
         Me.mniMateria.Name = "mniMateria"
         Me.mniMateria.Size = New System.Drawing.Size(216, 26)
         Me.mniMateria.Text = "Materia"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'StatusStrip1
         '
@@ -82,17 +90,25 @@ Partial Class frmMenuPpal
         Me.stsVersion.Size = New System.Drawing.Size(181, 20)
         Me.stsVersion.Text = "Versión del sistema 1.0.0.1"
         '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.SalirToolStripMenuItem.Text = "Salir"
-        '
         'ntiNotifcacion
         '
         Me.ntiNotifcacion.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ntiNotifcacion.Text = "Ayuda"
         Me.ntiNotifcacion.Visible = True
+        '
+        'LibroToolStripMenuItem
+        '
+        Me.LibroToolStripMenuItem.Enabled = False
+        Me.LibroToolStripMenuItem.Name = "LibroToolStripMenuItem"
+        Me.LibroToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.LibroToolStripMenuItem.Text = "Libro"
+        '
+        'BibliografíaToolStripMenuItem
+        '
+        Me.BibliografíaToolStripMenuItem.Enabled = False
+        Me.BibliografíaToolStripMenuItem.Name = "BibliografíaToolStripMenuItem"
+        Me.BibliografíaToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.BibliografíaToolStripMenuItem.Text = "Bibliografía"
         '
         'frmMenuPpal
         '
@@ -126,4 +142,6 @@ Partial Class frmMenuPpal
     Friend WithEvents mniMateria As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ntiNotifcacion As NotifyIcon
+    Friend WithEvents LibroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BibliografíaToolStripMenuItem As ToolStripMenuItem
 End Class

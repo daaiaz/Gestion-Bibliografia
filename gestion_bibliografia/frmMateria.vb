@@ -22,6 +22,7 @@ Public Class frmMateria
         nudMateria.Value = 0
 
         txtDescripcion.Clear()
+        cboFacultad.SelectedItem = -1
 
         'Tiramos el foco al primer control EDITABLE por el usuario
         nudMateria.Focus()
@@ -114,7 +115,7 @@ ON m.id_facultad = f.id_facultad").DefaultView
         If txtBuscarDescripcion.Text.Trim() <> "" Then
             'Aplicamos un filtro dentro del DataView.
             'El operador like se utiliza con campos del tipo Texto y recurre al caracter % que usa como caracter comodín.
-            dvMateria.RowFilter = "nombre_materia like '%" & txtBuscarDescripcion.Text.Trim() & "%'"
+            dvMateria.RowFilter = "Materia like '%" & txtBuscarDescripcion.Text.Trim() & "%'"
         End If
 
         If nudMateria.Value > 0 Then
@@ -141,6 +142,7 @@ ON m.id_facultad = f.id_facultad").DefaultView
         cboFacultad.DisplayMember = "nombre_facultad"
         'Campo de la tabla que identifica al código
         cboFacultad.ValueMember = "id_facultad"
+
     End Sub
 
 End Class

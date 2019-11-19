@@ -82,6 +82,7 @@ Public Class frmMateria
             nudMateria.Value = dtMateria.Rows(0).Item("id_materia")
             txtDescripcion.Text = dtMateria.Rows(0).Item("nombre_materia")
 
+
             'Para pasar a la primera pestaña (ABM) del tabControl
             tbcMateria.SelectedIndex = 0
 
@@ -145,4 +146,7 @@ ON m.id_facultad = f.id_facultad").DefaultView
 
     End Sub
 
+    Private Sub tbpABM_Click(sender As Object, e As EventArgs) Handles tbpABM.Click
+
+    End Sub
 End Class

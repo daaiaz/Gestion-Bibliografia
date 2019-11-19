@@ -18,4 +18,8 @@
 
         'ntiNotifcacion.ShowBalloonTip(3000)
     End Sub
+
+    Private Sub mniLibro_Click(sender As Object, e As EventArgs) Handles mniLibro.Click
+        My.Forms.frmLibro.Show()
+    End Sub
 End Class

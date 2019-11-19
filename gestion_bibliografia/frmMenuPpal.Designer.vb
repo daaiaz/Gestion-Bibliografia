@@ -28,12 +28,12 @@ Partial Class frmMenuPpal
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MateriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mniMateria = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniLibro = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BibliografíaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.stsVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ntiNotifcacion = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.LibroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BibliografíaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMenuPpal.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -44,7 +44,8 @@ Partial Class frmMenuPpal
         Me.mnuMenuPpal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem})
         Me.mnuMenuPpal.Location = New System.Drawing.Point(0, 0)
         Me.mnuMenuPpal.Name = "mnuMenuPpal"
-        Me.mnuMenuPpal.Size = New System.Drawing.Size(800, 28)
+        Me.mnuMenuPpal.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.mnuMenuPpal.Size = New System.Drawing.Size(600, 24)
         Me.mnuMenuPpal.TabIndex = 0
         Me.mnuMenuPpal.Text = "MenuStrip1"
         '
@@ -52,42 +53,57 @@ Partial Class frmMenuPpal
         '
         Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MateriaToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(71, 24)
+        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
         'MateriaToolStripMenuItem
         '
-        Me.MateriaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniMateria, Me.LibroToolStripMenuItem, Me.BibliografíaToolStripMenuItem})
+        Me.MateriaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mniMateria, Me.mniLibro, Me.BibliografíaToolStripMenuItem})
         Me.MateriaToolStripMenuItem.Name = "MateriaToolStripMenuItem"
-        Me.MateriaToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.MateriaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MateriaToolStripMenuItem.Text = "Programas"
         '
         'mniMateria
         '
         Me.mniMateria.Name = "mniMateria"
-        Me.mniMateria.Size = New System.Drawing.Size(216, 26)
+        Me.mniMateria.Size = New System.Drawing.Size(152, 22)
         Me.mniMateria.Text = "Materia"
+        '
+        'mniLibro
+        '
+        Me.mniLibro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.mniLibro.Name = "mniLibro"
+        Me.mniLibro.Size = New System.Drawing.Size(152, 22)
+        Me.mniLibro.Text = "Libro"
+        '
+        'BibliografíaToolStripMenuItem
+        '
+        Me.BibliografíaToolStripMenuItem.Enabled = False
+        Me.BibliografíaToolStripMenuItem.Name = "BibliografíaToolStripMenuItem"
+        Me.BibliografíaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BibliografíaToolStripMenuItem.Text = "Bibliografía"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stsVersion})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 425)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 344)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(800, 25)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 10, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(600, 22)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'stsVersion
         '
         Me.stsVersion.Name = "stsVersion"
-        Me.stsVersion.Size = New System.Drawing.Size(181, 20)
+        Me.stsVersion.Size = New System.Drawing.Size(143, 17)
         Me.stsVersion.Text = "Versión del sistema 1.0.0.1"
         '
         'ntiNotifcacion
@@ -96,32 +112,19 @@ Partial Class frmMenuPpal
         Me.ntiNotifcacion.Text = "Ayuda"
         Me.ntiNotifcacion.Visible = True
         '
-        'LibroToolStripMenuItem
-        '
-        Me.LibroToolStripMenuItem.Enabled = False
-        Me.LibroToolStripMenuItem.Name = "LibroToolStripMenuItem"
-        Me.LibroToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.LibroToolStripMenuItem.Text = "Libro"
-        '
-        'BibliografíaToolStripMenuItem
-        '
-        Me.BibliografíaToolStripMenuItem.Enabled = False
-        Me.BibliografíaToolStripMenuItem.Name = "BibliografíaToolStripMenuItem"
-        Me.BibliografíaToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.BibliografíaToolStripMenuItem.Text = "Bibliografía"
-        '
         'frmMenuPpal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(600, 366)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.mnuMenuPpal)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuMenuPpal
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMenuPpal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de Bibliografías"
@@ -142,6 +145,6 @@ Partial Class frmMenuPpal
     Friend WithEvents mniMateria As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ntiNotifcacion As NotifyIcon
-    Friend WithEvents LibroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mniLibro As ToolStripMenuItem
     Friend WithEvents BibliografíaToolStripMenuItem As ToolStripMenuItem
 End Class

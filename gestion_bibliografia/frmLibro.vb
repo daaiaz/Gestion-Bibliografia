@@ -146,23 +146,24 @@ Public Class frmLibro
         If tbcLibro.SelectedIndex = 1 Then
             'Asignamos el DataTable devuelto por el método "generar_datatabla" a la variable dvArticulos, conviertiéndolo primeramente en DataView
 
-            dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
-            a.nombre AS Autor FROM libro l JOIN autor a
-            ON l.id_autor = a.id_autor").DefaultView
+            'dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
+            'a.nombre AS Autor FROM libro l JOIN autor a
+            'ON l.id_autor = a.id_autor").DefaultView
 
-            dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
-            e.nombre AS Editorial FROM libro l JOIN editorial e
-            ON l.id_editorial = e.id_editorial").DefaultView
+            'dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
+            'e.nombre AS Editorial FROM libro l JOIN editorial e
+            'ON l.id_editorial = e.id_editorial").DefaultView
 
-            dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
-            c.descripcion AS Categoria FROM libro l JOIN categoria c
-            ON l.id_categoria = c.id_categoria").DefaultView
+            'dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
+            'c.descripcion AS Categoria FROM libro l JOIN categoria c
+            'ON l.id_categoria = c.id_categoria").DefaultView
 
-            dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
-            i.descripcion AS Idioma FROM libro l JOIN idioma i
-            ON l.id_idioma = i.id_idioma").DefaultView
+            'dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS Libro, 
+            'i.descripcion AS Idioma FROM libro l JOIN idioma i
+            'ON l.id_idioma = i.id_idioma").DefaultView
 
-            'dvLibro = generar_datatabla("SELECT l.id_libro AS codigo, l.libro AS isbn, l.titulo AS titulo, a.nombre AS autor, e.nombre AS editorial, l.formato AS formato, l.nro_paginas AS nro_paginas, l.nro_edicion AS nro_edicion, c.descripcion AS categoria, i.descripcion AS idioma FROM libro l JOIN autor a ON a.id_autor = l.id_autor JOIN editorial e ON e.id_editorial = l.id_editorial JOIN categoria c ON c.id_categoria = l.id_categoria JOIN editorial i ON i.id_idioma = l.id_idioma").DefaultView
+            'dvLibro = generar_datatabla("SELECT l.id_libro AS codigo, l.isbn AS isbn, l.titulo AS titulo, a.nombre AS autor, e.nombre AS editorial, l.formato AS Formato, l.nro_paginas AS Nro_paginas, l.nro_edicion AS nro_edicion, c.descripcion AS categoria, i.descripcion AS idioma FROM libro l JOIN autor a ON a.id_autor = l.id_autor JOIN editorial e ON e.id_editorial = l.id_editorial JOIN categoria c ON c.id_categoria = l.id_categoria JOIN editorial i ON i.id_idioma = l.id_idioma").DefaultView
+            dvLibro = generar_datatabla("SELECT l.id_libro AS Codigo, l.isbn AS ISBN, l.titulo AS Titulo, a.nombre AS Autor, e.nombre AS Editorial, l.formato AS Formato, l.nro_paginas AS NroPag, l.nro_edicion AS NroEdicion, c.descripcion AS Categoria, i.descripcion AS Idioma FROM libro l JOIN autor a ON a.id_autor = l.id_autor JOIN editorial e ON e.id_editorial = l.id_editorial JOIN categoria c ON c.id_categoria = l.id_categoria JOIN idioma i ON i.id_idioma = l.id_idioma").DefaultView
 
 
             'Asignamos el DataView como origen de datos de la grilla

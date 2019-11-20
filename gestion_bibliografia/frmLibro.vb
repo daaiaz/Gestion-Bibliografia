@@ -98,7 +98,7 @@ Public Class frmLibro
         If txtBuscarISBN.Text.Trim() <> "" Then
             'Aplicamos un filtro dentro del DataView.
             'El operador like se utiliza con campos del tipo Texto y recurre al caracter % que usa como caracter comodín.
-            dvLibro.RowFilter = "Libro like '%" & txtBuscarISBN.Text.Trim() & "%'"
+            dvLibro.RowFilter = "ISBN like '%" & txtBuscarISBN.Text.Trim() & "%'"
         End If
 
         If nudLibro.Value > 0 Then

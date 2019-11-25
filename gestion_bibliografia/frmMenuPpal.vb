@@ -22,4 +22,8 @@
     Private Sub mniLibro_Click(sender As Object, e As EventArgs) Handles mniLibro.Click
         My.Forms.frmLibro.Show()
     End Sub
+
+    Private Sub BibliografíaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BibliografíaToolStripMenuItem.Click
+        My.Forms.frmBibliografia.Show()
+    End Sub
 End Class

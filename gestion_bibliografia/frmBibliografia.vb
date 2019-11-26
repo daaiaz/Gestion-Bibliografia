@@ -5,7 +5,7 @@ Public Class frmBibliografia
 
     Function DatosValidos() As Boolean
 
-        If cboLibro.SelectedValue = "" Then
+        If cboLibro.Text = "" Then
             MessageBox.Show("Debe seleccionar el libro para agregar a la bibliografia", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
             cboLibro.Focus()
             Return False
@@ -34,27 +34,8 @@ Public Class frmBibliografia
         cboEstado.ValueMember = "id_estado"
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
-        Try
-            If DatosValidos() Then
-                If vNuevo = True Then
-                    'Rebizar los parametros no puedo comparar con mi bd
-                    EjecutarSQL("insert into bibliografia values(@1,@2,@3,@4)", cboMateria.SelectedValue, dtpFechaCreacion.Value, cboEstado.SelectedValue, txtComentario.Text.Trim)
-
-                Else
-                    EjecutarSQL("Update bibliografia SET id_materia = @1, fecha_creacion = @2 id_usuario = @3 comentario = @4 Where id_bibliografia = @5", cboMateria.SelectedValue, cboMateria.SelectedValue, cboEstado.SelectedValue, txtComentario.Text.Trim, CInt(nudBibliografiaId.Value))
-                End If
-
-                MessageBox.Show("Registro guardado con éxito!!!")
-                '   LimpiarFormulario()
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            'Cerrar la conexión
-            conexion.Close()
-        End Try
     End Sub
 
 
@@ -94,4 +75,15 @@ Public Class frmBibliografia
         vNuevo = True
     End Sub
 
+    Private Sub btnAgregarLibro_Click(sender As Object, e As EventArgs) Handles btnAgregarLibro.Click
+
+        dgvDetalleBibliografia.Rows.Add()
+
+        Dim nf As Short = dgvDetalleBibliografia.Rows.Count - 1
+
+        dgvDetalleBibliografia(0, nf).Value = nudBibliografiaId.Text
+        dgvDetalleBibliografia(1, nf).Value = cboLibro.Text
+        dgvDetalleBibliografia(2, nf).Value = cboEstado.Text
+
+    End Sub
 End Class

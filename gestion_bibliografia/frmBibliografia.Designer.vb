@@ -39,7 +39,7 @@ Partial Class frmBibliografia
         Me.lblMateria = New System.Windows.Forms.Label()
         Me.cboMateria = New System.Windows.Forms.ComboBox()
         Me.gbxBotonera = New System.Windows.Forms.GroupBox()
-        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.txtComentario = New System.Windows.Forms.TextBox()
@@ -185,7 +185,7 @@ Partial Class frmBibliografia
         '
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.Location = New System.Drawing.Point(30, 59)
+        Me.lblFecha.Location = New System.Drawing.Point(318, 54)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(44, 15)
         Me.lblFecha.TabIndex = 113
@@ -219,7 +219,7 @@ Partial Class frmBibliografia
         '
         'gbxBotonera
         '
-        Me.gbxBotonera.Controls.Add(Me.btnAgregar)
+        Me.gbxBotonera.Controls.Add(Me.btnAceptar)
         Me.gbxBotonera.Controls.Add(Me.btnEliminar)
         Me.gbxBotonera.Controls.Add(Me.btnCancelar)
         Me.gbxBotonera.Location = New System.Drawing.Point(77, 402)
@@ -228,14 +228,14 @@ Partial Class frmBibliografia
         Me.gbxBotonera.TabIndex = 55
         Me.gbxBotonera.TabStop = False
         '
-        'btnAgregar
+        'btnAceptar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(64, 21)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 0
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.btnAceptar.Location = New System.Drawing.Point(64, 21)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.TabIndex = 0
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
@@ -375,7 +375,7 @@ Partial Class frmBibliografia
     Friend WithEvents lblMateria As Label
     Friend WithEvents cboMateria As ComboBox
     Friend WithEvents gbxBotonera As GroupBox
-    Friend WithEvents btnAgregar As Button
+    Friend WithEvents btnAceptar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents txtComentario As TextBox

@@ -152,6 +152,9 @@
     <EmbeddedResource Include="frmBibliografia.resx">
       <DependentUpon>frmBibliografia.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCategoria.resx">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLibro.resx">
       <DependentUpon>frmLibro.vb</DependentUpon>
     </EmbeddedResource>

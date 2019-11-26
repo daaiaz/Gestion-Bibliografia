@@ -25,11 +25,16 @@ Partial Class frmBibliografia
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBibliografia))
         Me.tbcBibliografia = New System.Windows.Forms.TabControl()
         Me.tbpABM = New System.Windows.Forms.TabPage()
-        Me.tbpConsulta = New System.Windows.Forms.TabPage()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.txtBuscarMateria = New System.Windows.Forms.TextBox()
-        Me.lblBuscarMateria = New System.Windows.Forms.Label()
-        Me.dgvConsulta = New System.Windows.Forms.DataGridView()
+        Me.dgvDetalleBibliografia = New System.Windows.Forms.DataGridView()
+        Me.gbxLibro = New System.Windows.Forms.GroupBox()
+        Me.lblEstado = New System.Windows.Forms.Label()
+        Me.cboEstado = New System.Windows.Forms.ComboBox()
+        Me.lblLibro = New System.Windows.Forms.Label()
+        Me.btnQuitarLibro = New System.Windows.Forms.Button()
+        Me.btnAgregarLibro = New System.Windows.Forms.Button()
+        Me.cboLibro = New System.Windows.Forms.ComboBox()
+        Me.dtpFechaCreacion = New System.Windows.Forms.DateTimePicker()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.nudBibliografiaId = New System.Windows.Forms.NumericUpDown()
         Me.lblMateria = New System.Windows.Forms.Label()
         Me.cboMateria = New System.Windows.Forms.ComboBox()
@@ -40,24 +45,19 @@ Partial Class frmBibliografia
         Me.txtComentario = New System.Windows.Forms.TextBox()
         Me.lblComentario = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
-        Me.dtpFechaCreacion = New System.Windows.Forms.DateTimePicker()
-        Me.lblFecha = New System.Windows.Forms.Label()
-        Me.gbxLibro = New System.Windows.Forms.GroupBox()
-        Me.lblEstado = New System.Windows.Forms.Label()
-        Me.cboEstado = New System.Windows.Forms.ComboBox()
-        Me.lblLibro = New System.Windows.Forms.Label()
-        Me.btnQuitarLibro = New System.Windows.Forms.Button()
-        Me.btnAgregarLibro = New System.Windows.Forms.Button()
-        Me.cboLibro = New System.Windows.Forms.ComboBox()
-        Me.dgvDetalleBibliografia = New System.Windows.Forms.DataGridView()
+        Me.tbpConsulta = New System.Windows.Forms.TabPage()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtBuscarMateria = New System.Windows.Forms.TextBox()
+        Me.lblBuscarMateria = New System.Windows.Forms.Label()
+        Me.dgvConsulta = New System.Windows.Forms.DataGridView()
         Me.tbcBibliografia.SuspendLayout()
         Me.tbpABM.SuspendLayout()
-        Me.tbpConsulta.SuspendLayout()
-        CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDetalleBibliografia, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbxLibro.SuspendLayout()
         CType(Me.nudBibliografiaId, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxBotonera.SuspendLayout()
-        Me.gbxLibro.SuspendLayout()
-        CType(Me.dgvDetalleBibliografia, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tbpConsulta.SuspendLayout()
+        CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbcBibliografia
@@ -93,57 +93,103 @@ Partial Class frmBibliografia
         Me.tbpABM.Text = "ABM"
         Me.tbpABM.UseVisualStyleBackColor = True
         '
-        'tbpConsulta
+        'dgvDetalleBibliografia
         '
-        Me.tbpConsulta.Controls.Add(Me.btnBuscar)
-        Me.tbpConsulta.Controls.Add(Me.txtBuscarMateria)
-        Me.tbpConsulta.Controls.Add(Me.lblBuscarMateria)
-        Me.tbpConsulta.Controls.Add(Me.dgvConsulta)
-        Me.tbpConsulta.Location = New System.Drawing.Point(4, 22)
-        Me.tbpConsulta.Name = "tbpConsulta"
-        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpConsulta.Size = New System.Drawing.Size(589, 475)
-        Me.tbpConsulta.TabIndex = 1
-        Me.tbpConsulta.Text = "Consulta"
-        Me.tbpConsulta.UseVisualStyleBackColor = True
+        Me.dgvDetalleBibliografia.AllowUserToAddRows = False
+        Me.dgvDetalleBibliografia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDetalleBibliografia.Location = New System.Drawing.Point(33, 201)
+        Me.dgvDetalleBibliografia.Name = "dgvDetalleBibliografia"
+        Me.dgvDetalleBibliografia.Size = New System.Drawing.Size(513, 195)
+        Me.dgvDetalleBibliografia.TabIndex = 129
         '
-        'btnBuscar
+        'gbxLibro
         '
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(382, 9)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(100, 35)
-        Me.btnBuscar.TabIndex = 10
-        Me.btnBuscar.Text = "&Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.gbxLibro.Controls.Add(Me.lblEstado)
+        Me.gbxLibro.Controls.Add(Me.cboEstado)
+        Me.gbxLibro.Controls.Add(Me.lblLibro)
+        Me.gbxLibro.Controls.Add(Me.btnQuitarLibro)
+        Me.gbxLibro.Controls.Add(Me.btnAgregarLibro)
+        Me.gbxLibro.Controls.Add(Me.cboLibro)
+        Me.gbxLibro.Location = New System.Drawing.Point(33, 101)
+        Me.gbxLibro.Name = "gbxLibro"
+        Me.gbxLibro.Size = New System.Drawing.Size(513, 84)
+        Me.gbxLibro.TabIndex = 128
+        Me.gbxLibro.TabStop = False
+        Me.gbxLibro.Text = "Agregue libros a la bibliografía:"
         '
-        'txtBuscarMateria
+        'lblEstado
         '
-        Me.txtBuscarMateria.Location = New System.Drawing.Point(163, 9)
-        Me.txtBuscarMateria.Name = "txtBuscarMateria"
-        Me.txtBuscarMateria.Size = New System.Drawing.Size(213, 20)
-        Me.txtBuscarMateria.TabIndex = 9
+        Me.lblEstado.AutoSize = True
+        Me.lblEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEstado.Location = New System.Drawing.Point(9, 47)
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(48, 15)
+        Me.lblEstado.TabIndex = 93
+        Me.lblEstado.Text = "Estado:"
         '
-        'lblBuscarMateria
+        'cboEstado
         '
-        Me.lblBuscarMateria.AutoSize = True
-        Me.lblBuscarMateria.Location = New System.Drawing.Point(40, 12)
-        Me.lblBuscarMateria.Name = "lblBuscarMateria"
-        Me.lblBuscarMateria.Size = New System.Drawing.Size(95, 13)
-        Me.lblBuscarMateria.TabIndex = 8
-        Me.lblBuscarMateria.Text = "Buscar por materia"
+        Me.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboEstado.FormattingEnabled = True
+        Me.cboEstado.Location = New System.Drawing.Point(88, 46)
+        Me.cboEstado.Name = "cboEstado"
+        Me.cboEstado.Size = New System.Drawing.Size(304, 21)
+        Me.cboEstado.TabIndex = 92
         '
-        'dgvConsulta
+        'lblLibro
         '
-        Me.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvConsulta.Location = New System.Drawing.Point(3, 70)
-        Me.dgvConsulta.Margin = New System.Windows.Forms.Padding(2)
-        Me.dgvConsulta.Name = "dgvConsulta"
-        Me.dgvConsulta.RowTemplate.Height = 24
-        Me.dgvConsulta.Size = New System.Drawing.Size(583, 402)
-        Me.dgvConsulta.TabIndex = 7
+        Me.lblLibro.AutoSize = True
+        Me.lblLibro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLibro.Location = New System.Drawing.Point(9, 22)
+        Me.lblLibro.Name = "lblLibro"
+        Me.lblLibro.Size = New System.Drawing.Size(38, 15)
+        Me.lblLibro.TabIndex = 86
+        Me.lblLibro.Text = "Libro:"
+        '
+        'btnQuitarLibro
+        '
+        Me.btnQuitarLibro.Image = CType(resources.GetObject("btnQuitarLibro.Image"), System.Drawing.Image)
+        Me.btnQuitarLibro.Location = New System.Drawing.Point(457, 19)
+        Me.btnQuitarLibro.Name = "btnQuitarLibro"
+        Me.btnQuitarLibro.Size = New System.Drawing.Size(36, 47)
+        Me.btnQuitarLibro.TabIndex = 33
+        Me.btnQuitarLibro.UseVisualStyleBackColor = True
+        '
+        'btnAgregarLibro
+        '
+        Me.btnAgregarLibro.Image = CType(resources.GetObject("btnAgregarLibro.Image"), System.Drawing.Image)
+        Me.btnAgregarLibro.Location = New System.Drawing.Point(415, 19)
+        Me.btnAgregarLibro.Name = "btnAgregarLibro"
+        Me.btnAgregarLibro.Size = New System.Drawing.Size(36, 47)
+        Me.btnAgregarLibro.TabIndex = 32
+        Me.btnAgregarLibro.UseVisualStyleBackColor = True
+        '
+        'cboLibro
+        '
+        Me.cboLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboLibro.FormattingEnabled = True
+        Me.cboLibro.Location = New System.Drawing.Point(88, 19)
+        Me.cboLibro.Name = "cboLibro"
+        Me.cboLibro.Size = New System.Drawing.Size(304, 21)
+        Me.cboLibro.TabIndex = 27
+        '
+        'dtpFechaCreacion
+        '
+        Me.dtpFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFechaCreacion.Location = New System.Drawing.Point(113, 55)
+        Me.dtpFechaCreacion.Name = "dtpFechaCreacion"
+        Me.dtpFechaCreacion.Size = New System.Drawing.Size(100, 20)
+        Me.dtpFechaCreacion.TabIndex = 114
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.Location = New System.Drawing.Point(30, 59)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(44, 15)
+        Me.lblFecha.TabIndex = 113
+        Me.lblFecha.Text = "Fecha:"
         '
         'nudBibliografiaId
         '
@@ -234,103 +280,57 @@ Partial Class frmBibliografia
         Me.lblId.TabIndex = 52
         Me.lblId.Text = "Id Bibliografia"
         '
-        'dtpFechaCreacion
+        'tbpConsulta
         '
-        Me.dtpFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaCreacion.Location = New System.Drawing.Point(113, 55)
-        Me.dtpFechaCreacion.Name = "dtpFechaCreacion"
-        Me.dtpFechaCreacion.Size = New System.Drawing.Size(100, 20)
-        Me.dtpFechaCreacion.TabIndex = 114
+        Me.tbpConsulta.Controls.Add(Me.btnBuscar)
+        Me.tbpConsulta.Controls.Add(Me.txtBuscarMateria)
+        Me.tbpConsulta.Controls.Add(Me.lblBuscarMateria)
+        Me.tbpConsulta.Controls.Add(Me.dgvConsulta)
+        Me.tbpConsulta.Location = New System.Drawing.Point(4, 22)
+        Me.tbpConsulta.Name = "tbpConsulta"
+        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbpConsulta.Size = New System.Drawing.Size(589, 475)
+        Me.tbpConsulta.TabIndex = 1
+        Me.tbpConsulta.Text = "Consulta"
+        Me.tbpConsulta.UseVisualStyleBackColor = True
         '
-        'lblFecha
+        'btnBuscar
         '
-        Me.lblFecha.AutoSize = True
-        Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.Location = New System.Drawing.Point(30, 59)
-        Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(44, 15)
-        Me.lblFecha.TabIndex = 113
-        Me.lblFecha.Text = "Fecha:"
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(382, 9)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(100, 35)
+        Me.btnBuscar.TabIndex = 10
+        Me.btnBuscar.Text = "&Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'gbxLibro
+        'txtBuscarMateria
         '
-        Me.gbxLibro.Controls.Add(Me.lblEstado)
-        Me.gbxLibro.Controls.Add(Me.cboEstado)
-        Me.gbxLibro.Controls.Add(Me.lblLibro)
-        Me.gbxLibro.Controls.Add(Me.btnQuitarLibro)
-        Me.gbxLibro.Controls.Add(Me.btnAgregarLibro)
-        Me.gbxLibro.Controls.Add(Me.cboLibro)
-        Me.gbxLibro.Location = New System.Drawing.Point(33, 101)
-        Me.gbxLibro.Name = "gbxLibro"
-        Me.gbxLibro.Size = New System.Drawing.Size(513, 84)
-        Me.gbxLibro.TabIndex = 128
-        Me.gbxLibro.TabStop = False
-        Me.gbxLibro.Text = "Agregue libros a la bibliografía:"
+        Me.txtBuscarMateria.Location = New System.Drawing.Point(163, 9)
+        Me.txtBuscarMateria.Name = "txtBuscarMateria"
+        Me.txtBuscarMateria.Size = New System.Drawing.Size(213, 20)
+        Me.txtBuscarMateria.TabIndex = 9
         '
-        'lblEstado
+        'lblBuscarMateria
         '
-        Me.lblEstado.AutoSize = True
-        Me.lblEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEstado.Location = New System.Drawing.Point(9, 47)
-        Me.lblEstado.Name = "lblEstado"
-        Me.lblEstado.Size = New System.Drawing.Size(48, 15)
-        Me.lblEstado.TabIndex = 93
-        Me.lblEstado.Text = "Estado:"
+        Me.lblBuscarMateria.AutoSize = True
+        Me.lblBuscarMateria.Location = New System.Drawing.Point(40, 12)
+        Me.lblBuscarMateria.Name = "lblBuscarMateria"
+        Me.lblBuscarMateria.Size = New System.Drawing.Size(95, 13)
+        Me.lblBuscarMateria.TabIndex = 8
+        Me.lblBuscarMateria.Text = "Buscar por materia"
         '
-        'cboEstado
+        'dgvConsulta
         '
-        Me.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Location = New System.Drawing.Point(88, 46)
-        Me.cboEstado.Name = "cboEstado"
-        Me.cboEstado.Size = New System.Drawing.Size(304, 21)
-        Me.cboEstado.TabIndex = 92
-        '
-        'lblLibro
-        '
-        Me.lblLibro.AutoSize = True
-        Me.lblLibro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLibro.Location = New System.Drawing.Point(9, 22)
-        Me.lblLibro.Name = "lblLibro"
-        Me.lblLibro.Size = New System.Drawing.Size(38, 15)
-        Me.lblLibro.TabIndex = 86
-        Me.lblLibro.Text = "Libro:"
-        '
-        'btnQuitarLibro
-        '
-        Me.btnQuitarLibro.Image = CType(resources.GetObject("btnQuitarLibro.Image"), System.Drawing.Image)
-        Me.btnQuitarLibro.Location = New System.Drawing.Point(457, 19)
-        Me.btnQuitarLibro.Name = "btnQuitarLibro"
-        Me.btnQuitarLibro.Size = New System.Drawing.Size(36, 47)
-        Me.btnQuitarLibro.TabIndex = 33
-        Me.btnQuitarLibro.UseVisualStyleBackColor = True
-        '
-        'btnAgregarLibro
-        '
-        Me.btnAgregarLibro.Image = CType(resources.GetObject("btnAgregarLibro.Image"), System.Drawing.Image)
-        Me.btnAgregarLibro.Location = New System.Drawing.Point(415, 19)
-        Me.btnAgregarLibro.Name = "btnAgregarLibro"
-        Me.btnAgregarLibro.Size = New System.Drawing.Size(36, 47)
-        Me.btnAgregarLibro.TabIndex = 32
-        Me.btnAgregarLibro.UseVisualStyleBackColor = True
-        '
-        'cboLibro
-        '
-        Me.cboLibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboLibro.FormattingEnabled = True
-        Me.cboLibro.Location = New System.Drawing.Point(88, 19)
-        Me.cboLibro.Name = "cboLibro"
-        Me.cboLibro.Size = New System.Drawing.Size(304, 21)
-        Me.cboLibro.TabIndex = 27
-        '
-        'dgvDetalleBibliografia
-        '
-        Me.dgvDetalleBibliografia.AllowUserToAddRows = False
-        Me.dgvDetalleBibliografia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalleBibliografia.Location = New System.Drawing.Point(33, 201)
-        Me.dgvDetalleBibliografia.Name = "dgvDetalleBibliografia"
-        Me.dgvDetalleBibliografia.Size = New System.Drawing.Size(513, 195)
-        Me.dgvDetalleBibliografia.TabIndex = 129
+        Me.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvConsulta.Location = New System.Drawing.Point(3, 70)
+        Me.dgvConsulta.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvConsulta.Name = "dgvConsulta"
+        Me.dgvConsulta.RowTemplate.Height = 24
+        Me.dgvConsulta.Size = New System.Drawing.Size(583, 402)
+        Me.dgvConsulta.TabIndex = 7
         '
         'frmBibliografia
         '
@@ -343,14 +343,14 @@ Partial Class frmBibliografia
         Me.tbcBibliografia.ResumeLayout(False)
         Me.tbpABM.ResumeLayout(False)
         Me.tbpABM.PerformLayout()
+        CType(Me.dgvDetalleBibliografia, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbxLibro.ResumeLayout(False)
+        Me.gbxLibro.PerformLayout()
+        CType(Me.nudBibliografiaId, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbxBotonera.ResumeLayout(False)
         Me.tbpConsulta.ResumeLayout(False)
         Me.tbpConsulta.PerformLayout()
         CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudBibliografiaId, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.gbxBotonera.ResumeLayout(False)
-        Me.gbxLibro.ResumeLayout(False)
-        Me.gbxLibro.PerformLayout()
-        CType(Me.dgvDetalleBibliografia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

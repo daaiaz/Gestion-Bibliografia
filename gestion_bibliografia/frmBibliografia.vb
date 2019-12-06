@@ -2,6 +2,8 @@
 Public Class frmBibliografia
 
     Dim vNuevo As Boolean = True
+    Dim Transac As SqlTransaction
+    Dim vBibliografiaID As Integer
 
     Function DatosValidos() As Boolean
 
@@ -35,7 +37,13 @@ Public Class frmBibliografia
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        'Se hace el commit de la transacción. Acá recién se confirma en la BD
 
+        If MessageBox.Show("¿Está seguro de confirmar?", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+            ConfirmarTransaccion(Transac)
+            LimpiarFormulario()
+            LimpiarIngresoArticulo()
+        End If
     End Sub
 
 
@@ -77,13 +85,85 @@ Public Class frmBibliografia
 
     Private Sub btnAgregarLibro_Click(sender As Object, e As EventArgs) Handles btnAgregarLibro.Click
 
-        dgvDetalleBibliografia.Rows.Add()
+        'dgvDetalleBibliografia.Rows.Add()
 
-        Dim nf As Short = dgvDetalleBibliografia.Rows.Count - 1
+        'Dim nf As Short = dgvDetalleBibliografia.Rows.Count - 1
 
-        dgvDetalleBibliografia(0, nf).Value = nudBibliografiaId.Text
-        dgvDetalleBibliografia(1, nf).Value = cboLibro.Text
-        dgvDetalleBibliografia(2, nf).Value = cboEstado.Text
+        'dgvDetalleBibliografia(0, nf).Value = nudBibliografiaId.Text
+        'dgvDetalleBibliografia(1, nf).Value = cboLibro.Text
+        'dgvDetalleBibliografia(2, nf).Value = cboEstado.Text
 
+
+
+
+
+        'Try
+        '    If DatosValidos() Then
+        '        If vNuevo = True Then
+        '            EjecutarSQL("insert into bibliografia_detalle values(@1,@2,@3)", nudBibliografiaId.Value, cboLibro.SelectedValue, cboEstado.SelectedValue)
+        '            'Sino, significa que el registro ya existe y se debe actualizar
+        '        Else
+        '            EjecutarSQL("Update bibliografia_detalle SET id_libro = @1, id_estado = @2 Where id_bibliografia_detalle = @3", cboLibro.SelectedValue, cboEstado.SelectedValue)
+        '        End If
+
+        '        MessageBox.Show("Registro guardado con éxito!!!")
+        '        LimpiarFormulario()
+        '    End If
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'Finally
+        '    'Cerrar la conexión
+        '    conexion.Close()
+        'End Try
+
+        Try
+            'Validamos que se haya seleccionado un Auto
+            If cboLibro.Text = "" Then
+                cboLibro.Focus()
+                MsgBox("Debe seleccionar el Libro.")
+                Exit Sub 'Sirve para salir o abandonar una sub rutina. Es parecido al RETURN dentro de una función
+            End If
+
+            'vBibliografiaID = TraerValor("select max(cod_bibliografia) from bibliografia", Transac)
+
+            'Como pasó la validación anterior insertamos el registro correspondiente en la tabla Detalle (DetalleVenta)
+            EjecutarSQL("insert into bibliografia_detalle values (@1,@2,@3)", cboLibro.SelectedValue, cboEstado.SelectedValue, nudBibliografiaId.Value)
+
+            'Se muestra lo agregado en la grilla del detalle
+            ActualizarGrilla()
+
+            'Limpiamos los controles de la sección de Artículos
+            LimpiarIngresoArticulo()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+            'Si se produjo alguna excepción, revertimos todo anulando la transacción.
+            'AnularTransaccion(Transac)
+        End Try
+
+
+
+    End Sub
+
+    Private Sub LimpiarIngresoArticulo()
+        cboEstado.SelectedIndex = -1
+        cboLibro.SelectedIndex = -1
+
+    End Sub
+
+    Private Sub ActualizarGrilla()
+        'Se carga la grilla
+        'dgvDetalleBibliografia.DataSource = generar_datatabla("select * from bibliografia_detalle where id_bibliografia = " & vBibliografiaID)
+        dgvDetalleBibliografia.DataSource = generar_datatabla("SELECT l.titulo AS Libro, e.descripcion AS Estado FROM bibliografia_detalle bd JOIN libro l ON bd.id_libro = l.id_libro JOIN estado e ON bd.id_estado = e.id_estado")
+    End Sub
+
+    Private Sub dgvDetalleBibliografia_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDetalleBibliografia.CellClick
+
+        'Dim I As Integer = dgvDetalleBibliografia.CurrentRow.Index
+
+        'nudBibliografiaId.Value = dgvDetalleBibliografia(0, I).Value
+        'cboLibro.Text = dgvDetalleBibliografia(1, I).Value
+        'cboEstado.Text = dgvDetalleBibliografia(2, I).Value
     End Sub
 End Class

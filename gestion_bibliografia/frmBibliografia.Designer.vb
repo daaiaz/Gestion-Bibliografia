@@ -185,7 +185,7 @@ Partial Class frmBibliografia
         '
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha.Location = New System.Drawing.Point(318, 54)
+        Me.lblFecha.Location = New System.Drawing.Point(28, 58)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(44, 15)
         Me.lblFecha.TabIndex = 113

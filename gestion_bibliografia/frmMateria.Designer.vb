@@ -55,7 +55,7 @@ Partial Class frmMateria
         Me.tbcMateria.Controls.Add(Me.tbpConsulta)
         Me.tbcMateria.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tbcMateria.Location = New System.Drawing.Point(0, 0)
-        Me.tbcMateria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbcMateria.Margin = New System.Windows.Forms.Padding(2)
         Me.tbcMateria.Name = "tbcMateria"
         Me.tbcMateria.SelectedIndex = 0
         Me.tbcMateria.Size = New System.Drawing.Size(495, 283)
@@ -63,6 +63,7 @@ Partial Class frmMateria
         '
         'tbpABM
         '
+        Me.tbpABM.BackColor = System.Drawing.Color.Bisque
         Me.tbpABM.Controls.Add(Me.nudMateria)
         Me.tbpABM.Controls.Add(Me.lblFacultad)
         Me.tbpABM.Controls.Add(Me.cboFacultad)
@@ -72,13 +73,12 @@ Partial Class frmMateria
         Me.tbpABM.Controls.Add(Me.lblDescripcionMateria)
         Me.tbpABM.Controls.Add(Me.lblId)
         Me.tbpABM.Location = New System.Drawing.Point(4, 22)
-        Me.tbpABM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbpABM.Margin = New System.Windows.Forms.Padding(2)
         Me.tbpABM.Name = "tbpABM"
-        Me.tbpABM.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbpABM.Padding = New System.Windows.Forms.Padding(2)
         Me.tbpABM.Size = New System.Drawing.Size(487, 257)
         Me.tbpABM.TabIndex = 0
         Me.tbpABM.Text = "ABM"
-        Me.tbpABM.UseVisualStyleBackColor = True
         '
         'nudMateria
         '
@@ -182,18 +182,18 @@ Partial Class frmMateria
         '
         'tbpConsulta
         '
+        Me.tbpConsulta.BackColor = System.Drawing.Color.Bisque
         Me.tbpConsulta.Controls.Add(Me.btnBuscar)
         Me.tbpConsulta.Controls.Add(Me.txtBuscarDescripcion)
         Me.tbpConsulta.Controls.Add(Me.lblBuscarDescripcion)
         Me.tbpConsulta.Controls.Add(Me.dgvConsulta)
         Me.tbpConsulta.Location = New System.Drawing.Point(4, 22)
-        Me.tbpConsulta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbpConsulta.Margin = New System.Windows.Forms.Padding(2)
         Me.tbpConsulta.Name = "tbpConsulta"
-        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(2)
         Me.tbpConsulta.Size = New System.Drawing.Size(487, 257)
         Me.tbpConsulta.TabIndex = 1
         Me.tbpConsulta.Text = "Consulta"
-        Me.tbpConsulta.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
@@ -227,7 +227,7 @@ Partial Class frmMateria
         Me.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dgvConsulta.Location = New System.Drawing.Point(2, 79)
-        Me.dgvConsulta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvConsulta.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvConsulta.Name = "dgvConsulta"
         Me.dgvConsulta.RowTemplate.Height = 24
         Me.dgvConsulta.Size = New System.Drawing.Size(483, 176)
@@ -237,10 +237,11 @@ Partial Class frmMateria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Bisque
         Me.ClientSize = New System.Drawing.Size(495, 283)
         Me.Controls.Add(Me.tbcMateria)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMateria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Materia"

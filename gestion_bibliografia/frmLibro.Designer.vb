@@ -55,6 +55,7 @@ Partial Class frmLibro
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtBuscarISBN = New System.Windows.Forms.TextBox()
         Me.lblBuscarISBN = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.tbcLibro.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.nudNroPag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +79,7 @@ Partial Class frmLibro
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Bisque
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.lblCategoria)
         Me.TabPage1.Controls.Add(Me.cboCategoria)
         Me.TabPage1.Controls.Add(Me.txtEdicion)
@@ -103,7 +105,7 @@ Partial Class frmLibro
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(772, 478)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "ABM"
@@ -346,7 +348,7 @@ Partial Class frmLibro
         Me.tbpConsulta.Controls.Add(Me.lblBuscarISBN)
         Me.tbpConsulta.Location = New System.Drawing.Point(4, 22)
         Me.tbpConsulta.Name = "tbpConsulta"
-        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3)
         Me.tbpConsulta.Size = New System.Drawing.Size(772, 478)
         Me.tbpConsulta.TabIndex = 1
         Me.tbpConsulta.Text = "Consulta"
@@ -386,6 +388,15 @@ Partial Class frmLibro
         Me.lblBuscarISBN.Size = New System.Drawing.Size(86, 13)
         Me.lblBuscarISBN.TabIndex = 7
         Me.lblBuscarISBN.Text = "Buscar por ISBN"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(686, 218)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(78, 28)
+        Me.Button1.TabIndex = 97
+        Me.Button1.Text = "Categoria"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmLibro
         '
@@ -443,4 +454,5 @@ Partial Class frmLibro
     Friend WithEvents txtBuscarISBN As TextBox
     Friend WithEvents lblBuscarISBN As Label
     Friend WithEvents dtgLibro As DataGridView
+    Friend WithEvents Button1 As Button
 End Class

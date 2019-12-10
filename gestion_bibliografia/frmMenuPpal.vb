@@ -26,4 +26,24 @@
     Private Sub BibliografíaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BibliografíaToolStripMenuItem.Click
         My.Forms.frmBibliografia.Show()
     End Sub
+
+    Private Sub CiudadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CiudadToolStripMenuItem.Click
+        frmCiudad.Show()
+    End Sub
+
+    Private Sub IdiomaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IdiomaToolStripMenuItem.Click
+        frmIdioma.Show()
+    End Sub
+
+    Private Sub PaisToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaisToolStripMenuItem.Click
+        frmPais.Show()
+    End Sub
+
+    Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriaToolStripMenuItem.Click
+        frmCategoria.Show()
+    End Sub
+
+    Private Sub EstadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EstadoToolStripMenuItem.Click
+        frmEstado.Show()
+    End Sub
 End Class

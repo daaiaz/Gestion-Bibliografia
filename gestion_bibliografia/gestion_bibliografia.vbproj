@@ -114,6 +114,24 @@
     <Compile Include="frmCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCiudad.Designer.vb">
+      <DependentUpon>frmCiudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditorial.Designer.vb">
+      <DependentUpon>frmEditorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIdioma.Designer.vb">
+      <DependentUpon>frmIdioma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIdioma.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLibro.Designer.vb">
       <DependentUpon>frmLibro.vb</DependentUpon>
     </Compile>
@@ -130,6 +148,12 @@
       <DependentUpon>frmMenuPpal.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMenuPpal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPais.Designer.vb">
+      <DependentUpon>frmPais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPais.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -154,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditorial.resx">
+      <DependentUpon>frmEditorial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLibro.resx">
       <DependentUpon>frmLibro.vb</DependentUpon>

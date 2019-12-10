@@ -41,6 +41,7 @@ Partial Class frmCiudad
         Me.dgvConsulta = New System.Windows.Forms.DataGridView()
         Me.lblFacultad = New System.Windows.Forms.Label()
         Me.cboPais = New System.Windows.Forms.ComboBox()
+        Me.btnIdioma = New System.Windows.Forms.Button()
         Me.tbcCiudad.SuspendLayout()
         Me.tbpABM.SuspendLayout()
         CType(Me.nudCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +65,7 @@ Partial Class frmCiudad
         'tbpABM
         '
         Me.tbpABM.BackColor = System.Drawing.Color.Bisque
+        Me.tbpABM.Controls.Add(Me.btnIdioma)
         Me.tbpABM.Controls.Add(Me.lblFacultad)
         Me.tbpABM.Controls.Add(Me.cboPais)
         Me.tbpABM.Controls.Add(Me.nudCiudad)
@@ -83,7 +85,7 @@ Partial Class frmCiudad
         'nudCiudad
         '
         Me.nudCiudad.Enabled = False
-        Me.nudCiudad.Location = New System.Drawing.Point(128, 58)
+        Me.nudCiudad.Location = New System.Drawing.Point(117, 58)
         Me.nudCiudad.Name = "nudCiudad"
         Me.nudCiudad.Size = New System.Drawing.Size(120, 20)
         Me.nudCiudad.TabIndex = 51
@@ -139,7 +141,7 @@ Partial Class frmCiudad
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(128, 95)
+        Me.txtDescripcion.Location = New System.Drawing.Point(117, 95)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(224, 20)
         Me.txtDescripcion.TabIndex = 5
@@ -228,10 +230,19 @@ Partial Class frmCiudad
         '
         Me.cboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboPais.FormattingEnabled = True
-        Me.cboPais.Location = New System.Drawing.Point(126, 133)
+        Me.cboPais.Location = New System.Drawing.Point(116, 132)
         Me.cboPais.Name = "cboPais"
         Me.cboPais.Size = New System.Drawing.Size(225, 21)
         Me.cboPais.TabIndex = 52
+        '
+        'btnIdioma
+        '
+        Me.btnIdioma.Location = New System.Drawing.Point(347, 127)
+        Me.btnIdioma.Name = "btnIdioma"
+        Me.btnIdioma.Size = New System.Drawing.Size(66, 28)
+        Me.btnIdioma.TabIndex = 99
+        Me.btnIdioma.Text = "Pais"
+        Me.btnIdioma.UseVisualStyleBackColor = True
         '
         'frmCiudad
         '
@@ -271,4 +282,5 @@ Partial Class frmCiudad
     Friend WithEvents dgvConsulta As DataGridView
     Friend WithEvents lblFacultad As Label
     Friend WithEvents cboPais As ComboBox
+    Friend WithEvents btnIdioma As Button
 End Class

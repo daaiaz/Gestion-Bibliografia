@@ -214,4 +214,12 @@ Public Class frmLibro
         frmCategoria.Show()
 
     End Sub
+
+    Private Sub btnIdioma_Click(sender As Object, e As EventArgs) Handles btnIdioma.Click
+        frmIdioma.Show()
+    End Sub
+
+    Private Sub btnEditorial_Click(sender As Object, e As EventArgs) Handles btnEditorial.Click
+
+    End Sub
 End Class

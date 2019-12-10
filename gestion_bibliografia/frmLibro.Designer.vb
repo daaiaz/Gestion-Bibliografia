@@ -25,6 +25,8 @@ Partial Class frmLibro
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLibro))
         Me.tbcLibro = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnEditorial = New System.Windows.Forms.Button()
+        Me.btnIdioma = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblCategoria = New System.Windows.Forms.Label()
         Me.cboCategoria = New System.Windows.Forms.ComboBox()
@@ -56,8 +58,6 @@ Partial Class frmLibro
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtBuscarISBN = New System.Windows.Forms.TextBox()
         Me.lblBuscarISBN = New System.Windows.Forms.Label()
-        Me.btnIdioma = New System.Windows.Forms.Button()
-        Me.btnEditorial = New System.Windows.Forms.Button()
         Me.tbcLibro.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.nudNroPag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,6 +113,24 @@ Partial Class frmLibro
         Me.TabPage1.Size = New System.Drawing.Size(772, 478)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "ABM"
+        '
+        'btnEditorial
+        '
+        Me.btnEditorial.Location = New System.Drawing.Point(341, 194)
+        Me.btnEditorial.Name = "btnEditorial"
+        Me.btnEditorial.Size = New System.Drawing.Size(70, 28)
+        Me.btnEditorial.TabIndex = 100
+        Me.btnEditorial.Text = "Editorial"
+        Me.btnEditorial.UseVisualStyleBackColor = True
+        '
+        'btnIdioma
+        '
+        Me.btnIdioma.Location = New System.Drawing.Point(686, 193)
+        Me.btnIdioma.Name = "btnIdioma"
+        Me.btnIdioma.Size = New System.Drawing.Size(78, 28)
+        Me.btnIdioma.TabIndex = 98
+        Me.btnIdioma.Text = "Idioma"
+        Me.btnIdioma.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -401,24 +419,6 @@ Partial Class frmLibro
         Me.lblBuscarISBN.Size = New System.Drawing.Size(86, 13)
         Me.lblBuscarISBN.TabIndex = 7
         Me.lblBuscarISBN.Text = "Buscar por ISBN"
-        '
-        'btnIdioma
-        '
-        Me.btnIdioma.Location = New System.Drawing.Point(686, 193)
-        Me.btnIdioma.Name = "btnIdioma"
-        Me.btnIdioma.Size = New System.Drawing.Size(78, 28)
-        Me.btnIdioma.TabIndex = 98
-        Me.btnIdioma.Text = "Idioma"
-        Me.btnIdioma.UseVisualStyleBackColor = True
-        '
-        'btnEditorial
-        '
-        Me.btnEditorial.Location = New System.Drawing.Point(341, 194)
-        Me.btnEditorial.Name = "btnEditorial"
-        Me.btnEditorial.Size = New System.Drawing.Size(70, 28)
-        Me.btnEditorial.TabIndex = 100
-        Me.btnEditorial.Text = "Editorial"
-        Me.btnEditorial.UseVisualStyleBackColor = True
         '
         'frmLibro
         '

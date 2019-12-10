@@ -108,14 +108,14 @@ ON p.id_pais = p.id_pais").DefaultView
         If txtBuscarDescripcion.Text.Trim() <> "" Then
             'Aplicamos un filtro dentro del DataView.
             'El operador like se utiliza con campos del tipo Texto y recurre al caracter % que usa como caracter comodín.
-            dvCiudad.RowFilter = "Ciudad like '%" & txtBuscarDescripcion.Text.Trim() & "%'"
+            dvCiudad.RowFilter = "descripcion like '%" & txtBuscarDescripcion.Text.Trim() & "%'"
         End If
 
         If nudCiudad.Value > 0 Then
             If dvCiudad.RowFilter = "" Then
                 dvCiudad.RowFilter = "id_ciudad = " & nudCiudad.Value
             Else
-                dvCiudad.RowFilter = dvCiudad.RowFilter & " AND id_materia = " & nudCiudad.Value
+                dvCiudad.RowFilter = dvCiudad.RowFilter & " AND id_ciudad = " & nudCiudad.Value
             End If
         End If
     End Sub

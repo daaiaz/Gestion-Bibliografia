@@ -23,7 +23,7 @@ Partial Class frmPais
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPais))
-        Me.tbcMateria = New System.Windows.Forms.TabControl()
+        Me.tbcPais = New System.Windows.Forms.TabControl()
         Me.tbpABM = New System.Windows.Forms.TabPage()
         Me.nudPais = New System.Windows.Forms.NumericUpDown()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -39,7 +39,7 @@ Partial Class frmPais
         Me.txtBuscarDescripcion = New System.Windows.Forms.TextBox()
         Me.lblBuscarDescripcion = New System.Windows.Forms.Label()
         Me.dgvConsulta = New System.Windows.Forms.DataGridView()
-        Me.tbcMateria.SuspendLayout()
+        Me.tbcPais.SuspendLayout()
         Me.tbpABM.SuspendLayout()
         CType(Me.nudPais, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxBotonera.SuspendLayout()
@@ -47,17 +47,17 @@ Partial Class frmPais
         CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'tbcMateria
+        'tbcPais
         '
-        Me.tbcMateria.Controls.Add(Me.tbpABM)
-        Me.tbcMateria.Controls.Add(Me.tbpConsulta)
-        Me.tbcMateria.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbcMateria.Location = New System.Drawing.Point(0, 0)
-        Me.tbcMateria.Margin = New System.Windows.Forms.Padding(2)
-        Me.tbcMateria.Name = "tbcMateria"
-        Me.tbcMateria.SelectedIndex = 0
-        Me.tbcMateria.Size = New System.Drawing.Size(477, 288)
-        Me.tbcMateria.TabIndex = 1
+        Me.tbcPais.Controls.Add(Me.tbpABM)
+        Me.tbcPais.Controls.Add(Me.tbpConsulta)
+        Me.tbcPais.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tbcPais.Location = New System.Drawing.Point(0, 0)
+        Me.tbcPais.Margin = New System.Windows.Forms.Padding(2)
+        Me.tbcPais.Name = "tbcPais"
+        Me.tbcPais.SelectedIndex = 0
+        Me.tbcPais.Size = New System.Drawing.Size(477, 288)
+        Me.tbcPais.TabIndex = 1
         '
         'tbpABM
         '
@@ -216,10 +216,10 @@ Partial Class frmPais
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(477, 288)
-        Me.Controls.Add(Me.tbcMateria)
+        Me.Controls.Add(Me.tbcPais)
         Me.Name = "frmPais"
         Me.Text = "frmPais"
-        Me.tbcMateria.ResumeLayout(False)
+        Me.tbcPais.ResumeLayout(False)
         Me.tbpABM.ResumeLayout(False)
         Me.tbpABM.PerformLayout()
         CType(Me.nudPais, System.ComponentModel.ISupportInitialize).EndInit()
@@ -231,7 +231,7 @@ Partial Class frmPais
 
     End Sub
 
-    Friend WithEvents tbcMateria As TabControl
+    Friend WithEvents tbcPais As TabControl
     Friend WithEvents tbpABM As TabPage
     Friend WithEvents nudPais As NumericUpDown
     Friend WithEvents lblTitulo As Label

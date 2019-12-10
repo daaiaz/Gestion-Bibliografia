@@ -70,14 +70,14 @@ Partial Class frmLibro
         Me.tbcLibro.Controls.Add(Me.tbpConsulta)
         Me.tbcLibro.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tbcLibro.Location = New System.Drawing.Point(0, 0)
-        Me.tbcLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.tbcLibro.Name = "tbcLibro"
         Me.tbcLibro.SelectedIndex = 0
-        Me.tbcLibro.Size = New System.Drawing.Size(1040, 620)
+        Me.tbcLibro.Size = New System.Drawing.Size(780, 504)
         Me.tbcLibro.TabIndex = 75
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.Bisque
         Me.TabPage1.Controls.Add(Me.lblCategoria)
         Me.TabPage1.Controls.Add(Me.cboCategoria)
         Me.TabPage1.Controls.Add(Me.txtEdicion)
@@ -101,23 +101,20 @@ Partial Class frmLibro
         Me.TabPage1.Controls.Add(Me.lblISBN)
         Me.TabPage1.Controls.Add(Me.lblLibro)
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage1.Size = New System.Drawing.Size(1032, 591)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Size = New System.Drawing.Size(772, 478)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "ABM"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'lblCategoria
         '
         Me.lblCategoria.AutoSize = True
         Me.lblCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategoria.Location = New System.Drawing.Point(553, 276)
-        Me.lblCategoria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCategoria.Location = New System.Drawing.Point(415, 224)
         Me.lblCategoria.Name = "lblCategoria"
-        Me.lblCategoria.Size = New System.Drawing.Size(81, 20)
+        Me.lblCategoria.Size = New System.Drawing.Size(69, 17)
         Me.lblCategoria.TabIndex = 96
         Me.lblCategoria.Text = "Categoría"
         '
@@ -125,86 +122,77 @@ Partial Class frmLibro
         '
         Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(672, 271)
-        Me.cboCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboCategoria.Location = New System.Drawing.Point(504, 220)
         Me.cboCategoria.Name = "cboCategoria"
-        Me.cboCategoria.Size = New System.Drawing.Size(233, 28)
+        Me.cboCategoria.Size = New System.Drawing.Size(176, 25)
         Me.cboCategoria.TabIndex = 95
         '
         'txtEdicion
         '
-        Me.txtEdicion.Location = New System.Drawing.Point(673, 206)
-        Me.txtEdicion.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtEdicion.Location = New System.Drawing.Point(505, 167)
         Me.txtEdicion.Name = "txtEdicion"
-        Me.txtEdicion.Size = New System.Drawing.Size(232, 27)
+        Me.txtEdicion.Size = New System.Drawing.Size(175, 23)
         Me.txtEdicion.TabIndex = 93
         '
         'lblEdicion
         '
         Me.lblEdicion.AutoSize = True
         Me.lblEdicion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEdicion.Location = New System.Drawing.Point(556, 207)
-        Me.lblEdicion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEdicion.Location = New System.Drawing.Point(417, 168)
         Me.lblEdicion.Name = "lblEdicion"
-        Me.lblEdicion.Size = New System.Drawing.Size(96, 20)
+        Me.lblEdicion.Size = New System.Drawing.Size(81, 17)
         Me.lblEdicion.TabIndex = 94
         Me.lblEdicion.Text = "Nro Edición"
         '
         'nudNroPag
         '
-        Me.nudNroPag.Location = New System.Drawing.Point(673, 174)
-        Me.nudNroPag.Margin = New System.Windows.Forms.Padding(4)
+        Me.nudNroPag.Location = New System.Drawing.Point(505, 141)
         Me.nudNroPag.Maximum = New Decimal(New Integer() {1215752191, 23, 0, 0})
         Me.nudNroPag.Name = "nudNroPag"
-        Me.nudNroPag.Size = New System.Drawing.Size(79, 27)
+        Me.nudNroPag.Size = New System.Drawing.Size(59, 23)
         Me.nudNroPag.TabIndex = 92
         '
         'lblPagina
         '
         Me.lblPagina.AutoSize = True
         Me.lblPagina.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPagina.Location = New System.Drawing.Point(554, 177)
-        Me.lblPagina.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPagina.Location = New System.Drawing.Point(416, 144)
         Me.lblPagina.Name = "lblPagina"
-        Me.lblPagina.Size = New System.Drawing.Size(92, 20)
+        Me.lblPagina.Size = New System.Drawing.Size(79, 17)
         Me.lblPagina.TabIndex = 91
         Me.lblPagina.Text = "Nro Página"
         '
         'txtTitulo
         '
-        Me.txtTitulo.Location = New System.Drawing.Point(673, 142)
-        Me.txtTitulo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTitulo.Location = New System.Drawing.Point(505, 115)
         Me.txtTitulo.Name = "txtTitulo"
-        Me.txtTitulo.Size = New System.Drawing.Size(232, 27)
+        Me.txtTitulo.Size = New System.Drawing.Size(175, 23)
         Me.txtTitulo.TabIndex = 89
         '
         'lblTítulo
         '
         Me.lblTítulo.AutoSize = True
         Me.lblTítulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTítulo.Location = New System.Drawing.Point(553, 143)
-        Me.lblTítulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTítulo.Location = New System.Drawing.Point(415, 116)
         Me.lblTítulo.Name = "lblTítulo"
-        Me.lblTítulo.Size = New System.Drawing.Size(50, 20)
+        Me.lblTítulo.Size = New System.Drawing.Size(43, 17)
         Me.lblTítulo.TabIndex = 90
         Me.lblTítulo.Text = "Título"
         '
         'txtFormato
         '
-        Me.txtFormato.Location = New System.Drawing.Point(235, 276)
-        Me.txtFormato.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtFormato.Location = New System.Drawing.Point(176, 224)
         Me.txtFormato.Name = "txtFormato"
-        Me.txtFormato.Size = New System.Drawing.Size(233, 27)
+        Me.txtFormato.Size = New System.Drawing.Size(176, 23)
         Me.txtFormato.TabIndex = 87
         '
         'lblFormato
         '
         Me.lblFormato.AutoSize = True
         Me.lblFormato.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormato.Location = New System.Drawing.Point(121, 281)
-        Me.lblFormato.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblFormato.Location = New System.Drawing.Point(91, 228)
         Me.lblFormato.Name = "lblFormato"
-        Me.lblFormato.Size = New System.Drawing.Size(71, 20)
+        Me.lblFormato.Size = New System.Drawing.Size(60, 17)
         Me.lblFormato.TabIndex = 88
         Me.lblFormato.Text = "Formato"
         '
@@ -212,10 +200,9 @@ Partial Class frmLibro
         '
         Me.lblEditorial.AutoSize = True
         Me.lblEditorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEditorial.Location = New System.Drawing.Point(120, 245)
-        Me.lblEditorial.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEditorial.Location = New System.Drawing.Point(90, 199)
         Me.lblEditorial.Name = "lblEditorial"
-        Me.lblEditorial.Size = New System.Drawing.Size(70, 20)
+        Me.lblEditorial.Size = New System.Drawing.Size(59, 17)
         Me.lblEditorial.TabIndex = 86
         Me.lblEditorial.Text = "Editorial"
         '
@@ -223,20 +210,18 @@ Partial Class frmLibro
         '
         Me.cboEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditorial.FormattingEnabled = True
-        Me.cboEditorial.Location = New System.Drawing.Point(235, 242)
-        Me.cboEditorial.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboEditorial.Location = New System.Drawing.Point(176, 197)
         Me.cboEditorial.Name = "cboEditorial"
-        Me.cboEditorial.Size = New System.Drawing.Size(233, 28)
+        Me.cboEditorial.Size = New System.Drawing.Size(176, 25)
         Me.cboEditorial.TabIndex = 85
         '
         'lblAutor
         '
         Me.lblAutor.AutoSize = True
         Me.lblAutor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAutor.Location = New System.Drawing.Point(120, 208)
-        Me.lblAutor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAutor.Location = New System.Drawing.Point(90, 169)
         Me.lblAutor.Name = "lblAutor"
-        Me.lblAutor.Size = New System.Drawing.Size(49, 20)
+        Me.lblAutor.Size = New System.Drawing.Size(42, 17)
         Me.lblAutor.TabIndex = 84
         Me.lblAutor.Text = "Autor"
         '
@@ -244,30 +229,27 @@ Partial Class frmLibro
         '
         Me.cboAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboAutor.FormattingEnabled = True
-        Me.cboAutor.Location = New System.Drawing.Point(233, 205)
-        Me.cboAutor.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboAutor.Location = New System.Drawing.Point(175, 167)
         Me.cboAutor.Name = "cboAutor"
-        Me.cboAutor.Size = New System.Drawing.Size(235, 28)
+        Me.cboAutor.Size = New System.Drawing.Size(177, 25)
         Me.cboAutor.TabIndex = 83
         '
         'nudLibro
         '
         Me.nudLibro.Enabled = False
-        Me.nudLibro.Location = New System.Drawing.Point(233, 141)
-        Me.nudLibro.Margin = New System.Windows.Forms.Padding(4)
+        Me.nudLibro.Location = New System.Drawing.Point(175, 115)
         Me.nudLibro.Maximum = New Decimal(New Integer() {1215752191, 23, 0, 0})
         Me.nudLibro.Name = "nudLibro"
-        Me.nudLibro.Size = New System.Drawing.Size(82, 27)
+        Me.nudLibro.Size = New System.Drawing.Size(62, 23)
         Me.nudLibro.TabIndex = 82
         '
         'lblIdioma
         '
         Me.lblIdioma.AutoSize = True
         Me.lblIdioma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdioma.Location = New System.Drawing.Point(553, 242)
-        Me.lblIdioma.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblIdioma.Location = New System.Drawing.Point(415, 197)
         Me.lblIdioma.Name = "lblIdioma"
-        Me.lblIdioma.Size = New System.Drawing.Size(58, 20)
+        Me.lblIdioma.Size = New System.Drawing.Size(49, 17)
         Me.lblIdioma.TabIndex = 81
         Me.lblIdioma.Text = "Idioma"
         '
@@ -275,19 +257,19 @@ Partial Class frmLibro
         '
         Me.cboIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboIdioma.FormattingEnabled = True
-        Me.cboIdioma.Location = New System.Drawing.Point(672, 238)
-        Me.cboIdioma.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboIdioma.Location = New System.Drawing.Point(504, 193)
         Me.cboIdioma.Name = "cboIdioma"
-        Me.cboIdioma.Size = New System.Drawing.Size(233, 28)
+        Me.cboIdioma.Size = New System.Drawing.Size(176, 25)
         Me.cboIdioma.TabIndex = 80
         '
         'lblTitulo
         '
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(26, 40)
+        Me.lblTitulo.Location = New System.Drawing.Point(20, 32)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(75, 25)
+        Me.lblTitulo.Size = New System.Drawing.Size(63, 20)
         Me.lblTitulo.TabIndex = 79
         Me.lblTitulo.Text = "LIBRO"
         '
@@ -296,60 +278,53 @@ Partial Class frmLibro
         Me.gbxBotonera.Controls.Add(Me.btnAgregar)
         Me.gbxBotonera.Controls.Add(Me.btnEliminar)
         Me.gbxBotonera.Controls.Add(Me.btnCancelar)
-        Me.gbxBotonera.Location = New System.Drawing.Point(238, 393)
-        Me.gbxBotonera.Margin = New System.Windows.Forms.Padding(4)
+        Me.gbxBotonera.Location = New System.Drawing.Point(178, 319)
         Me.gbxBotonera.Name = "gbxBotonera"
-        Me.gbxBotonera.Padding = New System.Windows.Forms.Padding(4)
-        Me.gbxBotonera.Size = New System.Drawing.Size(571, 107)
+        Me.gbxBotonera.Size = New System.Drawing.Size(428, 87)
         Me.gbxBotonera.TabIndex = 78
         Me.gbxBotonera.TabStop = False
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(31, 26)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAgregar.Location = New System.Drawing.Point(23, 21)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(116, 48)
+        Me.btnAgregar.Size = New System.Drawing.Size(87, 39)
         Me.btnAgregar.TabIndex = 0
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(217, 26)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEliminar.Location = New System.Drawing.Point(163, 21)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(117, 48)
+        Me.btnEliminar.Size = New System.Drawing.Size(88, 39)
         Me.btnEliminar.TabIndex = 1
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(413, 26)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.Location = New System.Drawing.Point(310, 21)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(117, 48)
+        Me.btnCancelar.Size = New System.Drawing.Size(88, 39)
         Me.btnCancelar.TabIndex = 2
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'txtisbn
         '
-        Me.txtisbn.Location = New System.Drawing.Point(233, 173)
-        Me.txtisbn.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtisbn.Location = New System.Drawing.Point(175, 141)
         Me.txtisbn.Name = "txtisbn"
-        Me.txtisbn.Size = New System.Drawing.Size(235, 27)
+        Me.txtisbn.Size = New System.Drawing.Size(177, 23)
         Me.txtisbn.TabIndex = 76
         '
         'lblISBN
         '
         Me.lblISBN.AutoSize = True
         Me.lblISBN.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblISBN.Location = New System.Drawing.Point(120, 176)
-        Me.lblISBN.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblISBN.Location = New System.Drawing.Point(90, 143)
         Me.lblISBN.Name = "lblISBN"
-        Me.lblISBN.Size = New System.Drawing.Size(48, 20)
+        Me.lblISBN.Size = New System.Drawing.Size(39, 17)
         Me.lblISBN.TabIndex = 77
         Me.lblISBN.Text = "ISBN"
         '
@@ -357,10 +332,9 @@ Partial Class frmLibro
         '
         Me.lblLibro.AutoSize = True
         Me.lblLibro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLibro.Location = New System.Drawing.Point(120, 142)
-        Me.lblLibro.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLibro.Location = New System.Drawing.Point(90, 115)
         Me.lblLibro.Name = "lblLibro"
-        Me.lblLibro.Size = New System.Drawing.Size(65, 20)
+        Me.lblLibro.Size = New System.Drawing.Size(55, 17)
         Me.lblLibro.TabIndex = 75
         Me.lblLibro.Text = "Id Libro"
         '
@@ -370,11 +344,10 @@ Partial Class frmLibro
         Me.tbpConsulta.Controls.Add(Me.btnBuscar)
         Me.tbpConsulta.Controls.Add(Me.txtBuscarISBN)
         Me.tbpConsulta.Controls.Add(Me.lblBuscarISBN)
-        Me.tbpConsulta.Location = New System.Drawing.Point(4, 25)
-        Me.tbpConsulta.Margin = New System.Windows.Forms.Padding(4)
+        Me.tbpConsulta.Location = New System.Drawing.Point(4, 22)
         Me.tbpConsulta.Name = "tbpConsulta"
-        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(4)
-        Me.tbpConsulta.Size = New System.Drawing.Size(1032, 591)
+        Me.tbpConsulta.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tbpConsulta.Size = New System.Drawing.Size(772, 478)
         Me.tbpConsulta.TabIndex = 1
         Me.tbpConsulta.Text = "Consulta"
         Me.tbpConsulta.UseVisualStyleBackColor = True
@@ -383,49 +356,45 @@ Partial Class frmLibro
         '
         Me.dtgLibro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgLibro.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dtgLibro.Location = New System.Drawing.Point(4, 119)
-        Me.dtgLibro.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtgLibro.Location = New System.Drawing.Point(3, 95)
         Me.dtgLibro.Name = "dtgLibro"
-        Me.dtgLibro.Size = New System.Drawing.Size(1024, 468)
+        Me.dtgLibro.Size = New System.Drawing.Size(766, 380)
         Me.dtgLibro.TabIndex = 10
         '
         'btnBuscar
         '
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(353, 48)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscar.Location = New System.Drawing.Point(265, 39)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(33, 33)
+        Me.btnBuscar.Size = New System.Drawing.Size(25, 27)
         Me.btnBuscar.TabIndex = 9
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'txtBuscarISBN
         '
-        Me.txtBuscarISBN.Location = New System.Drawing.Point(22, 53)
-        Me.txtBuscarISBN.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtBuscarISBN.Location = New System.Drawing.Point(16, 43)
         Me.txtBuscarISBN.Name = "txtBuscarISBN"
-        Me.txtBuscarISBN.Size = New System.Drawing.Size(309, 22)
+        Me.txtBuscarISBN.Size = New System.Drawing.Size(233, 20)
         Me.txtBuscarISBN.TabIndex = 8
         '
         'lblBuscarISBN
         '
         Me.lblBuscarISBN.AutoSize = True
-        Me.lblBuscarISBN.Location = New System.Drawing.Point(19, 32)
-        Me.lblBuscarISBN.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblBuscarISBN.Location = New System.Drawing.Point(14, 26)
         Me.lblBuscarISBN.Name = "lblBuscarISBN"
-        Me.lblBuscarISBN.Size = New System.Drawing.Size(112, 17)
+        Me.lblBuscarISBN.Size = New System.Drawing.Size(86, 13)
         Me.lblBuscarISBN.TabIndex = 7
         Me.lblBuscarISBN.Text = "Buscar por ISBN"
         '
         'frmLibro
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1040, 620)
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.ClientSize = New System.Drawing.Size(780, 504)
         Me.Controls.Add(Me.tbcLibro)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmLibro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Libros"

@@ -4,9 +4,9 @@ Module AccesoDatos
 
     'Creamos el objeto de conexión con visibilidad pública
 
-    'Public conexion As New SqlConnection("data source=m201-04;initial catalog=AutoPy;uid=sa;pwd=@lumno123")
+    Public conexion As New SqlConnection("data source=m201-30; initial catalog= gestion_bibliografia; uid=sa ; pwd=@lumno123")
     'Public conexion As New SqlConnection("data source = (localdb)\SERVER; initial catalog = GestionBibliografia; integrated security = true;")
-    Public conexion As New SqlConnection("data source =LAPTOP-Q9SUVL2I\SQLEXPRESS; initial catalog = gestion_bibliografia; user=sa; password=@lumno123")
+    ' Public conexion As New SqlConnection("data source =LAPTOP-Q9SUVL2I\SQLEXPRESS; initial catalog = gestion_bibliografia; user=sa; password=@lumno123")
 
 
     'Función para recuperar registros de la base de datos (select)

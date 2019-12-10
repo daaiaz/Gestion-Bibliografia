@@ -179,6 +179,9 @@
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCiudad.resx">
+      <DependentUpon>frmCiudad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditorial.resx">
       <DependentUpon>frmEditorial.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPpal.resx">
       <DependentUpon>frmMenuPpal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPais.resx">
+      <DependentUpon>frmPais.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

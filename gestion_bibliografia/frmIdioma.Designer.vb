@@ -22,8 +22,16 @@ Partial Class frmIdioma
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'frmIdioma
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(415, 297)
+        Me.Name = "frmIdioma"
         Me.Text = "frmIdioma"
+        Me.ResumeLayout(False)
+
     End Sub
 End Class

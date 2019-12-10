@@ -120,10 +120,10 @@
     <Compile Include="frmCiudad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditorial.Designer.vb">
-      <DependentUpon>frmEditorial.vb</DependentUpon>
+    <Compile Include="frmEstado.Designer.vb">
+      <DependentUpon>frmEstado.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEditorial.vb">
+    <Compile Include="frmEstado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmIdioma.Designer.vb">
@@ -182,8 +182,11 @@
     <EmbeddedResource Include="frmCiudad.resx">
       <DependentUpon>frmCiudad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditorial.resx">
-      <DependentUpon>frmEditorial.vb</DependentUpon>
+    <EmbeddedResource Include="frmEstado.resx">
+      <DependentUpon>frmEstado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIdioma.resx">
+      <DependentUpon>frmIdioma.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLibro.resx">
       <DependentUpon>frmLibro.vb</DependentUpon>

@@ -25,6 +25,9 @@ Partial Class frmCiudad
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCiudad))
         Me.tbcCiudad = New System.Windows.Forms.TabControl()
         Me.tbpABM = New System.Windows.Forms.TabPage()
+        Me.btnPais = New System.Windows.Forms.Button()
+        Me.lblFacultad = New System.Windows.Forms.Label()
+        Me.cboPais = New System.Windows.Forms.ComboBox()
         Me.nudCiudad = New System.Windows.Forms.NumericUpDown()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.gbxBotonera = New System.Windows.Forms.GroupBox()
@@ -39,9 +42,6 @@ Partial Class frmCiudad
         Me.txtBuscarDescripcion = New System.Windows.Forms.TextBox()
         Me.lblBuscarDescripcion = New System.Windows.Forms.Label()
         Me.dgvConsulta = New System.Windows.Forms.DataGridView()
-        Me.lblFacultad = New System.Windows.Forms.Label()
-        Me.cboPais = New System.Windows.Forms.ComboBox()
-        Me.btnIdioma = New System.Windows.Forms.Button()
         Me.tbcCiudad.SuspendLayout()
         Me.tbpABM.SuspendLayout()
         CType(Me.nudCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,7 +65,7 @@ Partial Class frmCiudad
         'tbpABM
         '
         Me.tbpABM.BackColor = System.Drawing.Color.Bisque
-        Me.tbpABM.Controls.Add(Me.btnIdioma)
+        Me.tbpABM.Controls.Add(Me.btnPais)
         Me.tbpABM.Controls.Add(Me.lblFacultad)
         Me.tbpABM.Controls.Add(Me.cboPais)
         Me.tbpABM.Controls.Add(Me.nudCiudad)
@@ -81,6 +81,33 @@ Partial Class frmCiudad
         Me.tbpABM.Size = New System.Drawing.Size(418, 228)
         Me.tbpABM.TabIndex = 0
         Me.tbpABM.Text = "ABM"
+        '
+        'btnPais
+        '
+        Me.btnPais.Location = New System.Drawing.Point(347, 127)
+        Me.btnPais.Name = "btnPais"
+        Me.btnPais.Size = New System.Drawing.Size(66, 28)
+        Me.btnPais.TabIndex = 99
+        Me.btnPais.Text = "Pais"
+        Me.btnPais.UseVisualStyleBackColor = True
+        '
+        'lblFacultad
+        '
+        Me.lblFacultad.AutoSize = True
+        Me.lblFacultad.Location = New System.Drawing.Point(43, 135)
+        Me.lblFacultad.Name = "lblFacultad"
+        Me.lblFacultad.Size = New System.Drawing.Size(27, 13)
+        Me.lblFacultad.TabIndex = 53
+        Me.lblFacultad.Text = "Pais"
+        '
+        'cboPais
+        '
+        Me.cboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboPais.FormattingEnabled = True
+        Me.cboPais.Location = New System.Drawing.Point(116, 132)
+        Me.cboPais.Name = "cboPais"
+        Me.cboPais.Size = New System.Drawing.Size(225, 21)
+        Me.cboPais.TabIndex = 52
         '
         'nudCiudad
         '
@@ -217,33 +244,6 @@ Partial Class frmCiudad
         Me.dgvConsulta.Size = New System.Drawing.Size(414, 176)
         Me.dgvConsulta.TabIndex = 0
         '
-        'lblFacultad
-        '
-        Me.lblFacultad.AutoSize = True
-        Me.lblFacultad.Location = New System.Drawing.Point(43, 135)
-        Me.lblFacultad.Name = "lblFacultad"
-        Me.lblFacultad.Size = New System.Drawing.Size(27, 13)
-        Me.lblFacultad.TabIndex = 53
-        Me.lblFacultad.Text = "Pais"
-        '
-        'cboPais
-        '
-        Me.cboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboPais.FormattingEnabled = True
-        Me.cboPais.Location = New System.Drawing.Point(116, 132)
-        Me.cboPais.Name = "cboPais"
-        Me.cboPais.Size = New System.Drawing.Size(225, 21)
-        Me.cboPais.TabIndex = 52
-        '
-        'btnIdioma
-        '
-        Me.btnIdioma.Location = New System.Drawing.Point(347, 127)
-        Me.btnIdioma.Name = "btnIdioma"
-        Me.btnIdioma.Size = New System.Drawing.Size(66, 28)
-        Me.btnIdioma.TabIndex = 99
-        Me.btnIdioma.Text = "Pais"
-        Me.btnIdioma.UseVisualStyleBackColor = True
-        '
         'frmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -282,5 +282,5 @@ Partial Class frmCiudad
     Friend WithEvents dgvConsulta As DataGridView
     Friend WithEvents lblFacultad As Label
     Friend WithEvents cboPais As ComboBox
-    Friend WithEvents btnIdioma As Button
+    Friend WithEvents btnPais As Button
 End Class

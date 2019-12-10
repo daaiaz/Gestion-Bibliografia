@@ -219,7 +219,5 @@ Public Class frmLibro
         frmIdioma.Show()
     End Sub
 
-    Private Sub btnEditorial_Click(sender As Object, e As EventArgs) Handles btnEditorial.Click
 
-    End Sub
 End Class

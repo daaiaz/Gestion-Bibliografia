@@ -25,7 +25,6 @@ Partial Class frmLibro
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLibro))
         Me.tbcLibro = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.btnEditorial = New System.Windows.Forms.Button()
         Me.btnIdioma = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblCategoria = New System.Windows.Forms.Label()
@@ -81,7 +80,6 @@ Partial Class frmLibro
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Bisque
-        Me.TabPage1.Controls.Add(Me.btnEditorial)
         Me.TabPage1.Controls.Add(Me.btnIdioma)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.lblCategoria)
@@ -113,15 +111,6 @@ Partial Class frmLibro
         Me.TabPage1.Size = New System.Drawing.Size(772, 478)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "ABM"
-        '
-        'btnEditorial
-        '
-        Me.btnEditorial.Location = New System.Drawing.Point(341, 194)
-        Me.btnEditorial.Name = "btnEditorial"
-        Me.btnEditorial.Size = New System.Drawing.Size(70, 28)
-        Me.btnEditorial.TabIndex = 100
-        Me.btnEditorial.Text = "Editorial"
-        Me.btnEditorial.UseVisualStyleBackColor = True
         '
         'btnIdioma
         '
@@ -478,5 +467,4 @@ Partial Class frmLibro
     Friend WithEvents dtgLibro As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents btnIdioma As Button
-    Friend WithEvents btnEditorial As Button
 End Class

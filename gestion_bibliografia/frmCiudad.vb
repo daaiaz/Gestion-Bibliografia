@@ -67,8 +67,8 @@
         LimpiarFormulario()
     End Sub
 
-    Private Sub btnIdioma_Click(sender As Object, e As EventArgs) Handles btnIdioma.Click
-
+    Private Sub btnPais_Click(sender As Object, e As EventArgs) Handles btnPais.Click
+        frmPais.Show()
     End Sub
 
     Private Sub tbcCiudad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tbcCiudad.SelectedIndexChanged
@@ -85,7 +85,14 @@ ON p.id_pais = p.id_pais").DefaultView
     End Sub
 
     Private Sub frmCiudad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Determinamos el origen de datos del combo, haciendo uso de la función "generar_datatabla" que retorna un objeto del tipo DataTable
+        'El método "generar_datatabla" recibe como parámetro un SELECT en forma de String
 
+        cboPais.DataSource = generar_datatabla("select * from pais")
+        'Campo a mostrar
+        cboPais.DisplayMember = "descripcion"
+        'Campo de la tabla que identifica al código
+        cboPais.ValueMember = "id_pais"
     End Sub
 
     Private Sub txtBuscarDescripcion_TextChanged(sender As Object, e As EventArgs) Handles txtBuscarDescripcion.TextChanged
@@ -94,6 +101,22 @@ ON p.id_pais = p.id_pais").DefaultView
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        'Primeramente dejamos sin ningún filtro en caso de que ya se haya hecho uno con anterioridad
+        dvCiudad.RowFilter = ""
 
+        'Preguntamos si el usuario ingresó algún valor en el TextBox de Búsqueda
+        If txtBuscarDescripcion.Text.Trim() <> "" Then
+            'Aplicamos un filtro dentro del DataView.
+            'El operador like se utiliza con campos del tipo Texto y recurre al caracter % que usa como caracter comodín.
+            dvCiudad.RowFilter = "Ciudad like '%" & txtBuscarDescripcion.Text.Trim() & "%'"
+        End If
+
+        If nudCiudad.Value > 0 Then
+            If dvCiudad.RowFilter = "" Then
+                dvCiudad.RowFilter = "id_ciudad = " & nudCiudad.Value
+            Else
+                dvCiudad.RowFilter = dvCiudad.RowFilter & " AND id_materia = " & nudCiudad.Value
+            End If
+        End If
     End Sub
 End Class

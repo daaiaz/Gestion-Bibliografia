@@ -84,7 +84,7 @@
     End Sub
 
     Private Sub txtBuscarDescripcion_TextChanged(sender As Object, e As EventArgs) Handles txtBuscarDescripcion.TextChanged
-
+        btnBuscar_Click(Me, New EventArgs)
     End Sub
 
     Private Sub tbcPais_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tbcPais.SelectedIndexChanged

@@ -30,7 +30,7 @@ Partial Class frmEstado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Name = "frmEstado"
-        Me.Text = "frmEditorial"
+        Me.Text = "frmEstado"
         Me.ResumeLayout(False)
 
     End Sub

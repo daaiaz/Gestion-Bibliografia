@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmLibro
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,12 @@ Partial Class frmLibro
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLibro))
         Me.tbcLibro = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.lblCategoria = New System.Windows.Forms.Label()
         Me.cboCategoria = New System.Windows.Forms.ComboBox()
         Me.txtEdicion = New System.Windows.Forms.TextBox()
@@ -55,7 +56,8 @@ Partial Class frmLibro
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtBuscarISBN = New System.Windows.Forms.TextBox()
         Me.lblBuscarISBN = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnIdioma = New System.Windows.Forms.Button()
+        Me.btnEditorial = New System.Windows.Forms.Button()
         Me.tbcLibro.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.nudNroPag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +81,8 @@ Partial Class frmLibro
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Bisque
+        Me.TabPage1.Controls.Add(Me.btnEditorial)
+        Me.TabPage1.Controls.Add(Me.btnIdioma)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.lblCategoria)
         Me.TabPage1.Controls.Add(Me.cboCategoria)
@@ -110,11 +114,20 @@ Partial Class frmLibro
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "ABM"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(686, 224)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(78, 28)
+        Me.Button1.TabIndex = 97
+        Me.Button1.Text = "Categoria"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'lblCategoria
         '
         Me.lblCategoria.AutoSize = True
         Me.lblCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategoria.Location = New System.Drawing.Point(415, 224)
+        Me.lblCategoria.Location = New System.Drawing.Point(415, 230)
         Me.lblCategoria.Name = "lblCategoria"
         Me.lblCategoria.Size = New System.Drawing.Size(69, 17)
         Me.lblCategoria.TabIndex = 96
@@ -124,7 +137,7 @@ Partial Class frmLibro
         '
         Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(504, 220)
+        Me.cboCategoria.Location = New System.Drawing.Point(505, 225)
         Me.cboCategoria.Name = "cboCategoria"
         Me.cboCategoria.Size = New System.Drawing.Size(176, 25)
         Me.cboCategoria.TabIndex = 95
@@ -183,7 +196,7 @@ Partial Class frmLibro
         '
         'txtFormato
         '
-        Me.txtFormato.Location = New System.Drawing.Point(176, 224)
+        Me.txtFormato.Location = New System.Drawing.Point(163, 224)
         Me.txtFormato.Name = "txtFormato"
         Me.txtFormato.Size = New System.Drawing.Size(176, 23)
         Me.txtFormato.TabIndex = 87
@@ -192,7 +205,7 @@ Partial Class frmLibro
         '
         Me.lblFormato.AutoSize = True
         Me.lblFormato.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormato.Location = New System.Drawing.Point(91, 228)
+        Me.lblFormato.Location = New System.Drawing.Point(78, 228)
         Me.lblFormato.Name = "lblFormato"
         Me.lblFormato.Size = New System.Drawing.Size(60, 17)
         Me.lblFormato.TabIndex = 88
@@ -202,7 +215,7 @@ Partial Class frmLibro
         '
         Me.lblEditorial.AutoSize = True
         Me.lblEditorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEditorial.Location = New System.Drawing.Point(90, 199)
+        Me.lblEditorial.Location = New System.Drawing.Point(77, 199)
         Me.lblEditorial.Name = "lblEditorial"
         Me.lblEditorial.Size = New System.Drawing.Size(59, 17)
         Me.lblEditorial.TabIndex = 86
@@ -212,7 +225,7 @@ Partial Class frmLibro
         '
         Me.cboEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditorial.FormattingEnabled = True
-        Me.cboEditorial.Location = New System.Drawing.Point(176, 197)
+        Me.cboEditorial.Location = New System.Drawing.Point(163, 197)
         Me.cboEditorial.Name = "cboEditorial"
         Me.cboEditorial.Size = New System.Drawing.Size(176, 25)
         Me.cboEditorial.TabIndex = 85
@@ -221,7 +234,7 @@ Partial Class frmLibro
         '
         Me.lblAutor.AutoSize = True
         Me.lblAutor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAutor.Location = New System.Drawing.Point(90, 169)
+        Me.lblAutor.Location = New System.Drawing.Point(77, 169)
         Me.lblAutor.Name = "lblAutor"
         Me.lblAutor.Size = New System.Drawing.Size(42, 17)
         Me.lblAutor.TabIndex = 84
@@ -231,7 +244,7 @@ Partial Class frmLibro
         '
         Me.cboAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboAutor.FormattingEnabled = True
-        Me.cboAutor.Location = New System.Drawing.Point(175, 167)
+        Me.cboAutor.Location = New System.Drawing.Point(162, 167)
         Me.cboAutor.Name = "cboAutor"
         Me.cboAutor.Size = New System.Drawing.Size(177, 25)
         Me.cboAutor.TabIndex = 83
@@ -239,7 +252,7 @@ Partial Class frmLibro
         'nudLibro
         '
         Me.nudLibro.Enabled = False
-        Me.nudLibro.Location = New System.Drawing.Point(175, 115)
+        Me.nudLibro.Location = New System.Drawing.Point(162, 115)
         Me.nudLibro.Maximum = New Decimal(New Integer() {1215752191, 23, 0, 0})
         Me.nudLibro.Name = "nudLibro"
         Me.nudLibro.Size = New System.Drawing.Size(62, 23)
@@ -315,7 +328,7 @@ Partial Class frmLibro
         '
         'txtisbn
         '
-        Me.txtisbn.Location = New System.Drawing.Point(175, 141)
+        Me.txtisbn.Location = New System.Drawing.Point(162, 141)
         Me.txtisbn.Name = "txtisbn"
         Me.txtisbn.Size = New System.Drawing.Size(177, 23)
         Me.txtisbn.TabIndex = 76
@@ -324,7 +337,7 @@ Partial Class frmLibro
         '
         Me.lblISBN.AutoSize = True
         Me.lblISBN.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblISBN.Location = New System.Drawing.Point(90, 143)
+        Me.lblISBN.Location = New System.Drawing.Point(77, 143)
         Me.lblISBN.Name = "lblISBN"
         Me.lblISBN.Size = New System.Drawing.Size(39, 17)
         Me.lblISBN.TabIndex = 77
@@ -334,7 +347,7 @@ Partial Class frmLibro
         '
         Me.lblLibro.AutoSize = True
         Me.lblLibro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLibro.Location = New System.Drawing.Point(90, 115)
+        Me.lblLibro.Location = New System.Drawing.Point(77, 115)
         Me.lblLibro.Name = "lblLibro"
         Me.lblLibro.Size = New System.Drawing.Size(55, 17)
         Me.lblLibro.TabIndex = 75
@@ -389,14 +402,23 @@ Partial Class frmLibro
         Me.lblBuscarISBN.TabIndex = 7
         Me.lblBuscarISBN.Text = "Buscar por ISBN"
         '
-        'Button1
+        'btnIdioma
         '
-        Me.Button1.Location = New System.Drawing.Point(686, 218)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(78, 28)
-        Me.Button1.TabIndex = 97
-        Me.Button1.Text = "Categoria"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnIdioma.Location = New System.Drawing.Point(686, 193)
+        Me.btnIdioma.Name = "btnIdioma"
+        Me.btnIdioma.Size = New System.Drawing.Size(78, 28)
+        Me.btnIdioma.TabIndex = 98
+        Me.btnIdioma.Text = "Idioma"
+        Me.btnIdioma.UseVisualStyleBackColor = True
+        '
+        'btnEditorial
+        '
+        Me.btnEditorial.Location = New System.Drawing.Point(341, 194)
+        Me.btnEditorial.Name = "btnEditorial"
+        Me.btnEditorial.Size = New System.Drawing.Size(70, 28)
+        Me.btnEditorial.TabIndex = 100
+        Me.btnEditorial.Text = "Editorial"
+        Me.btnEditorial.UseVisualStyleBackColor = True
         '
         'frmLibro
         '
@@ -455,4 +477,6 @@ Partial Class frmLibro
     Friend WithEvents lblBuscarISBN As Label
     Friend WithEvents dtgLibro As DataGridView
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnIdioma As Button
+    Friend WithEvents btnEditorial As Button
 End Class

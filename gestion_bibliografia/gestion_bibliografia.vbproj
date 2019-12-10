@@ -185,6 +185,9 @@
     <EmbeddedResource Include="frmEditorial.resx">
       <DependentUpon>frmEditorial.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmIdioma.resx">
+      <DependentUpon>frmIdioma.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLibro.resx">
       <DependentUpon>frmLibro.vb</DependentUpon>
     </EmbeddedResource>

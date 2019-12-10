@@ -119,4 +119,28 @@ ON p.id_pais = p.id_pais").DefaultView
             End If
         End If
     End Sub
+
+    Private Sub dgvConsulta_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvConsulta.CellDoubleClick
+        'Instanciamos un objeto del tipo DataTable, que es una tabla en memoria, en la cual volcaremos los datos de la base datos a nuestra aplicación
+        Dim dtCiudad As DataTable
+
+        'dgvConsulta(0, e.RowIndex) --> Cero hace referencia a la primera columna, y e.RowIndex hace referencia a la fila seleccionada
+
+        dtCiudad = generar_datatabla("Select * from ciudad where id_ciudad=" & dgvConsulta(0, e.RowIndex).Value)
+        'dtMateria = generar_datatabla("Select id_materia as Codigo, nombre_materia as Materia" & dgvConsulta(0, e.RowIndex).Value)
+
+        'Si hay filas en la tabla en memoria
+        If dtCiudad.Rows.Count > 0 Then
+            'Rows(0) hace referencia a la primera fila recuperada de la base de datos, que en este caso es la única, ya que por el where en la sentencia sql estamos recuperando un solo registro. Item("Columna") hace referencia a la columna que queremos recuperar de la tabla, tiene que coincidir con el nombre del campo en la tabla.
+            nudCiudad.Value = dtCiudad.Rows(0).Item("id_ciudad")
+            txtDescripcion.Text = dtCiudad.Rows(0).Item("descripcion")
+
+
+            'Para pasar a la primera pestaña (ABM) del tabControl
+            tbcCiudad.SelectedIndex = 0
+
+            'La bandera que nos permite determinar si un registro es nuevo o no, en este caso como recuperamos datos de la bd asignamos false ya que sabemos el registro no es nuevo.
+            vNuevo = False
+        End If
+    End Sub
 End Class

@@ -124,7 +124,7 @@
         If dtCategoria.Rows.Count > 0 Then
             'Rows(0) hace referencia a la primera fila recuperada de la base de datos, que en este caso es la única, ya que por el where en la sentencia sql estamos recuperando un solo registro. Item("Columna") hace referencia a la columna que queremos recuperar de la tabla, tiene que coincidir con el nombre del campo en la tabla.
             nudCategoria.Value = dtCategoria.Rows(0).Item("id_categoria")
-            txtDescripcion.Text = dtCategoria.Rows(0).Item("descripcion_categoria")
+            txtDescripcion.Text = dtCategoria.Rows(0).Item("descripcion")
 
 
             'Para pasar a la primera pestaña (ABM) del tabControl

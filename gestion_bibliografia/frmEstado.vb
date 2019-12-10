@@ -97,4 +97,27 @@
         End If
     End Sub
 
+    Private Sub dgvConsulta_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvConsulta.CellDoubleClick
+        'Instanciamos un objeto del tipo DataTable, que es una tabla en memoria, en la cual volcaremos los datos de la base datos a nuestra aplicación
+        Dim dtEstado As DataTable
+
+        'dgvConsulta(0, e.RowIndex) --> Cero hace referencia a la primera columna, y e.RowIndex hace referencia a la fila seleccionada
+
+        dtEstado = generar_datatabla("Select * from estado where id_estado=" & dgvConsulta(0, e.RowIndex).Value)
+        'dtMateria = generar_datatabla("Select id_materia as Codigo, nombre_materia as Materia" & dgvConsulta(0, e.RowIndex).Value)
+
+        'Si hay filas en la tabla en memoria
+        If dtEstado.Rows.Count > 0 Then
+            'Rows(0) hace referencia a la primera fila recuperada de la base de datos, que en este caso es la única, ya que por el where en la sentencia sql estamos recuperando un solo registro. Item("Columna") hace referencia a la columna que queremos recuperar de la tabla, tiene que coincidir con el nombre del campo en la tabla.
+            nudEstado.Value = dtEstado.Rows(0).Item("id_estado")
+            txtDescripcion.Text = dtEstado.Rows(0).Item("descripcion")
+
+
+            'Para pasar a la primera pestaña (ABM) del tabControl
+            tbcEstado.SelectedIndex = 0
+
+            'La bandera que nos permite determinar si un registro es nuevo o no, en este caso como recuperamos datos de la bd asignamos false ya que sabemos el registro no es nuevo.
+            vNuevo = False
+        End If
+    End Sub
 End Class
